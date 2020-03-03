@@ -1,0 +1,334 @@
+@media only screen and (max-width : 1600px)
+	.image-slider-block
+		max-width: 1170px
+		margin: 0 auto
+		.hooper-slide
+			.img_size
+				img
+					width: 100%
+	.case-block
+		//max-width: calc(1170px + 30px)
+		max-width: 1170px
+		margin: 0 auto
+	.image-slider-block	.hooper-list
+		transform: translateX(0) !important
+	.case-block .hooper-list
+		//transform: translateX(15px) !important
+	.image-slider-block	.hooper-navigation
+		padding-right: 0
+	.case-block	.hooper-navigation
+		padding: 0 15px
+
+
+@media only screen and (max-width : 1440px)
+	.hooper-slide
+		.img_size
+			img
+				width: 100%
+	.slider_zone
+		.hooper-track
+			margin-bottom: 50px
+	.desc-block
+		.img_size
+			img
+				width: 100%
+	.image-slider-block
+		.hooper-track
+			.is-active.is-current
+				.img_size
+					padding-right: 15px
+				& + li
+					.img_size
+						padding-left: 15px
+			.is-prev
+				.img_size
+					padding-left: 15px
+			.is-next
+				.img_size
+					padding-right: 15px
+	.movie_zone
+		.video_box
+			.img_size
+				img
+					width: 100%
+	.case_desc_square, .case_discovery_circle, .case_third_plus, .view_triangle-contacts-right, .contacts-content .view_plus-contacts
+		display: none !important
+	.contacts-content
+		.circle-figure
+			right: 15px
+		.view_plus-contacts
+			right: 0
+	.case-content
+		overflow-x: hidden
+
+
+
+@media only screen and (max-width : 1200px)
+	.case_desc_circle
+		z-index: -1
+		left: auto
+		right: 15px
+		top: 40px
+	.case_first_plus
+		z-index: -1
+		left: 15px
+		top: 70px
+		transform: translateX(0)
+		display: block
+	.case_desc_triangle
+		top: 39%
+	.case_desc_circle_plus
+		right: 30px
+		top: 39%
+		transform: translateX(0)
+	.desc-block, .client-movie-block, .contacts-block
+		[class*="-figure"]
+			display: block
+	.case_first_snake
+		display: none !important
+	.case_movie_circle_plus
+		top: 40px
+		left: 0
+		transform: translateX(0)
+	.case_movie_square
+		bottom: -40px
+	.case-block
+		h2
+			margin-bottom: 60px
+	.case_skew, .case_rectangle
+		display: none !important
+	.case_desc_triangle
+		display: none
+	.circle-plus-figure.case_desc_circle_plus
+		display: none
+
+
+
+@media only screen and (max-width : 1090px)
+	.nav_list
+		li
+			&:last-of-type
+				display: none
+	.first_brand_box .text_bit, .zone_br ul
+		max-width: 750px
+	.contacts-content .view_snake-contacts-middle
+		display: none
+
+
+
+@media only screen and (max-width : 992px)
+	.first_brand_box .text_bit, .zone_br ul
+		width: 70%
+		max-width: 100%
+	.brand_list, .name_brand
+		width: 25%
+	.project_list
+		.project-item
+			h5
+				margin-bottom: 25px
+				height: 65px
+			.img_size
+				width: 100%
+				height: 350px
+	.case_desc_triangle, .case_desc_circle_plus
+		top: 48%
+	.large_h
+		font-size: 9vw
+	.desc-block
+		padding-top: 150px
+		padding-bottom: 75px
+	.discovery-block, .image-slider-block, .client-movie-block
+		padding: 75px 15px
+	.case-block
+		padding: 125px 0 75px 0
+	.contacts-content
+		.contacts-block
+			padding: 75px 15px 90px 15px
+	.case-block
+		h2
+			margin-bottom: 50px
+	.tech_list
+		flex-wrap: wrap
+
+
+
+
+@media only screen and (max-width : 768px)
+	header
+		height: 120px
+	.project_list
+		.project-item
+			.img_size
+				height: 400px
+				img
+					object-fit: cover
+	.case_desc_triangle, .case_desc_circle_plus
+		top: 52%
+	.first_brand_box
+		display: block
+		margin-bottom: 40px
+	.brand_list
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 10px
+		li
+			width: 50%
+			line-height: 1
+	.first_brand_box .text_bit, .zone_br ul
+		width: 100%
+	.text_bit p
+		line-height: 1.4
+	.name_brand
+		width: 100%
+		margin-bottom: 10px
+	.zone_br
+		display: block
+	.second_brand_box
+		.zone_br
+			&:first-of-type
+				margin-bottom: 40px
+			&:last-of-type
+				display: flex
+	.disc_zone
+		display: block
+		h4
+			margin-bottom: 40px
+	.case_movie_circle_plus
+		top: 0
+	.case_movie_square
+		right: 15px
+		left: auto
+	.case-block
+		h2
+			margin-bottom: 40px
+	.contacts-content
+		.contacts-block
+			padding: 120px 15px 80px 15px
+			flex-direction: column-reverse
+		.contacts-form
+			width: 100%
+			.common_btn
+				margin-top: 10px
+		h2
+			margin-bottom: 20px
+		.contacts_flex
+			display: flex
+			flex-direction: column-reverse
+			width: 100%
+		.logo
+			margin: 0 0 25px 0
+		.location
+			margin: 0 0 25px 0
+		form
+			margin-bottom: 50px
+		.view_snake-contacts
+			display: none
+	.image-slider-block
+		.hooper-track
+			.is-active.is-current
+				.img_size
+					padding-right: 0
+				& + li
+					.img_size
+						padding-left: 0
+			.is-prev
+				.img_size
+					padding-left: 0
+			.is-next
+				.img_size
+					padding-right: 0
+	.case_desc_triangle, .case_desc_circle_plus
+		top: 75%
+		z-index: -1
+	.brand_box
+		margin-bottom: 100px
+
+
+
+
+@media only screen and (max-width : 480px)
+	header
+		height: auto
+	.btn_header
+		margin: 0
+	.flex_header
+		flex-direction: column
+		padding: 20px 15px
+	.logo_nav
+		margin-bottom: 20px
+		.logo
+			margin-right: 0
+	.estimate_menu
+		width: 100%
+		justify-content: space-between
+	[class*="-figure"], .case_first_plus
+		transform: scale(0.7)
+	.project_list
+		.project-item
+			margin-bottom: 40px
+			a
+				padding: 15px 10px
+			.img_size
+				height: 250px
+	.brand_list
+		margin-bottom: 15px
+		li
+			width: 100%
+			margin-bottom: 10px
+	.disc_zone
+		h4
+			margin-bottom: 30px
+	.video_box
+		.img_size
+			height: 250px
+			img
+				height: 100%
+				object-fit: cover
+	.contacts-content
+		.contacts-block
+			padding: 90px 15px 80px 15px
+	.reference-zone
+		flex-direction: column-reverse
+	.phone_address_box
+		margin-bottom: 30px
+	.phone_list
+		display: flex
+		li
+			margin-right: 20px
+			&:last-child
+				margin-right: 0
+	.case-block
+		h2
+			text-align: left
+		.hooper-list
+			transform: translateX(0px) !important
+		.hooper-navigation
+			padding-right: 0
+	.project_list.case_page
+		.project-item
+			padding: 0
+	.project-content
+		.project_list
+			.project-item
+				h5
+					height: auto
+					font-size: 28px
+				.img_size
+					height: 250px
+					margin: 0 auto 15px auto
+	.project_list .project-item h5
+		height: auto
+		margin-bottom: 15px
+		font-size: 28px
+	.project_list .project-item .img_size
+		margin: 0 auto 15px auto
+	.contacts-content .reference-zone
+		width: 100%					
+
+
+
+
+
+
+

@@ -1,0 +1,1550 @@
+@import "reset"
+
+//=================================================svg
+
+// Styling ----------------------------------------------------- //
+$backgroundColor: #181d27
+$strokeColor    : #ffffff
+// Animation --------------------------------------------------- //
+$duration       : 2s
+$timingEase     : cubic-bezier(.51, .92, .24, 1)
+$rotationStart  : 0deg
+$dashStart      : 1200
+
+.hide-scroll
+	overflow: hidden
+
+.wrapper-preloader
+	display: flex
+	width: 100vw
+	height: 100vh
+	background: #181818
+	justify-content: center
+	position: fixed
+	z-index: 5
+	.svg
+		width: 48px
+		transform: rotate(0)
+		animation: rotate $duration $timingEase forwards infinite
+	.path
+		stroke-dasharray: 590
+		stroke-dashoffset: 0
+		stroke: $strokeColor
+		fill: none
+		animation: dash $duration linear forwards infinite
+	@keyframes dash
+		from
+			stroke-dashoffset: $dashStart
+		to
+			stroke-dashoffset: 0
+	img
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		position: absolute
+	.path-2
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: transparent
+		border-radius: 50%
+		border: 3px solid rgba(255, 255, 255, 0.3)
+	.svg_box_circle
+		position: relative
+		align-self: center
+		font-size: 0
+
+
+
+
+//================================================ GENERAL
+body
+  background: #181818
+  transition: background 0.2s linear
+  font-family: "NeutraTextTF-Book", sans-serif
+  font-size: 20px
+  width: 100%
+  min-height: 100vh
+  position: relative
+  color: #ffffff
+  margin: 0 auto
+  overflow-x: hidden
+  -webkit-text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  a 
+	  color: white
+.container .more_articles-white-theme
+	&:after
+		background: #ecebeb
+
+.container
+  margin: 0 auto
+  max-width: 1170px
+  position: relative
+  padding: 0
+
+.container-large
+  max-width: 1380px
+  margin: 0 auto
+
+.hide-visibility
+	visibility: hidden
+
+body
+	&:after
+		content: ''
+		position: fixed
+		display: block
+		height: 100vh
+		width: 100vw
+		left: 0
+		top: 0
+		background: #181818
+		z-index: 1000
+		opacity: 0
+		transition: .1s linear
+		pointer-events: none
+
+.effect_switch
+	overflow: hidden
+	pointer-events: none
+	&:after
+		transition: .1s linear
+		opacity: 1
+
+.v--modal
+	display: none
+
+.v--modal-block-scroll
+	.v--modal
+		display: block
+
+
+// .v--modal-box.v--modal
+// 	min-height: 100vh
+// 	display: flex
+// 	align-items: center
+// 	top: 0 !important
+
+
+//================================================ HEADER
+header
+	height: 182px
+	position: absolute
+	width: 100%
+	z-index: 4
+
+.flex_header
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.logo
+	width: 76px
+	height: 31px
+	margin-right: 29px
+
+.nav_list
+	display: flex
+	li
+		margin-right: 32px
+		line-height: 1
+		&:last-child
+			margin-right: 0
+			padding-left: 8px
+			&:after
+				content: ''
+				position: absolute
+				display: block
+				background: #ffffff
+				height: 18px
+				width: 1px
+				top: 50%
+				left: -12px
+				transform: translateY(-50%)
+		a
+			+text(NeutraTextTF-Bold, 15, normal, bold)
+			position: relative
+			padding: 20px 0
+			&:after
+				// content: ''
+				// display: block
+				// position: absolute
+				// width: 8px
+				// height: 8px
+				// background: transparent
+				// transition: .3s linear all
+				// border-radius: 50%
+				// top: 12px
+				// transform: translateY(-100%)
+		&:hover
+			a
+				&:after
+					background: #ffd63c
+					transition: .3s linear all
+
+.nav_list .white-theme-strip
+	a
+		&:after
+			border-radius: 5px
+			top: 0
+			transform: translateY(3px)
+			z-index: -1
+	&:hover
+		a
+			&:after
+				width: 100%
+
+.logo_nav
+	display: flex
+	align-items: center
+
+.phone_list
+	li
+		line-height: 1
+		a
+			+text(NeutraTextTF-Bold, 15, normal,bold)
+
+.estimate_menu
+	display: flex
+
+.btn_header
+	+text(NeutraTextTF-Bold, 15, normal,bold)
+	color: #000000
+	background: #ffffff
+	display: block
+	transition: .5s linear
+	line-height: 38px
+	border-radius: 38px
+	padding: 0 12px
+	display: flex
+	align-items: center
+	margin-right: 33px
+	.link_circle
+		width: 20px
+		height: 20px
+		background: #ffffff
+		display: block
+		margin-right: 10px
+		border-radius: 50%
+		box-shadow: inset 0 0 0 5px #000000
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			display: block
+			border-radius: 50%
+			background: rgba(255, 255, 255, .1)
+			width: 65px
+			height: 65px
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%) scale(0)
+	&:hover
+		background: #ffd63c
+		transition: .5s linear
+		.link_circle
+			&:after
+				animation: btn_circle 1.5s ease-out
+
+@keyframes btn_circle
+  0%
+  	transform: translate(-50%, -50%) scale(0)
+  49%
+  	transform: translate(-50%, -50%) scale(1)
+  51%
+  	transform: translate(-50%, -50%) scale(1)
+  100%
+  	transform: translate(-50%, -50%) scale(0)
+
+.menu_box
+	display: flex
+	align-items: center
+	&:hover
+		.line_menu
+			span
+				transition: .3s linear all
+				transform: translateX(0)
+
+.menu_word
+	+text(NeutraTextTF-Bold, 15, normal, bold)
+
+.line_menu
+	margin-right: 12px
+	width: 23px
+	overflow: hidden
+	span
+		height: 3px
+		width: 100%
+		display: block
+		margin-bottom: 4px
+		background: #ffffff
+		transition: .3s linear all
+		&:last-child
+			margin-bottom: 0
+		&:first-child
+			transform: translateX(40%)
+		&:last-child
+			transform: translateX(-40%)
+
+//================================================ MODAL CONTENT
+.v--modal
+	border-radius: 0
+	box-shadow: 0 0 0 !important
+	background: #181818 !important
+	.container
+		height: 100%
+		position: relative
+
+.modal_content
+	height: 100%
+	display: flex
+	align-items: center
+	.phone_list
+		margin-bottom: 50px
+	[class*="-figure"]
+		display: block
+	&.contacts-content
+		.view_snake-contacts
+			position: relative
+			bottom: auto
+		.view_triangle-contacts-left
+			top: 340px
+		.view_snake-contacts-middle
+			top: 45%
+		.view_triangle-contacts-right
+			top: 17%
+		.case_desc_circle_plus
+			z-index: 10
+			top: auto
+			bottom: 17%
+			.case_second_plus
+				margin-left: 65px
+
+.modal_box
+	height: 100%
+	display: flex
+	align-items: baseline
+	justify-content: space-between
+	padding: 0 15px
+
+.social_list
+	li
+		margin-bottom: 20px
+		a
+			font-size: 26px
+			display: block
+			text-align: right
+		&:last-child
+			margin-bottom: 0
+
+.nav_list_md
+	li
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+		a
+			+text(NeutraTextTF-Demi, 36, normal, normal)
+			letter-spacing: 1px
+			display: block
+
+.modal_box
+	.nav_list
+		display: block
+		li
+			margin-bottom: 20px
+			&:last-child
+				margin-bottom: 0
+				&:after
+					display: none
+			a
+				+text(NeutraTextTF-Demi, 36, normal, normal)
+				letter-spacing: 1px
+				padding: 0
+				&:after
+					display: none
+
+.modal_content
+	.contacts-form
+		position: relative
+		z-index: 10
+		margin: 0 auto
+
+.close_btn
+	position: absolute
+	display: block
+	background: transparent
+	right: 15px
+	top: 85px
+	z-index: 100
+
+[class*="-figure"] 
+	position: absolute
+	display: none
+	background-color: #1f1f1f
+	z-index: 0
+
+.hide_h
+	display: none
+
+//================================================ MODAL CONTENT
+.v--modal
+	border-radius: 0
+	box-shadow: 0 0 0 !important
+	background: #181818 !important
+	.container
+		height: 99vh
+		position: relative
+
+.modal_content
+	height: 100%
+	display: flex
+	align-items: center
+	.phone_list
+		margin-bottom: 50px
+	[class*="-figure"]
+		display: block
+	&.contacts-content
+		.view_snake-contacts
+			position: relative
+			bottom: auto
+		.view_triangle-contacts-left
+			top: 340px
+		.view_snake-contacts-middle
+			top: 45%
+		.view_triangle-contacts-right
+			top: 17%
+		.case_desc_circle_plus
+			z-index: 10
+			top: auto
+			bottom: 17%
+			.case_second_plus
+				margin-left: 65px
+
+.modal_box
+	height: 100%
+	display: flex
+	align-items: baseline
+	justify-content: space-between
+	padding: 0 15px
+
+.v--modal-box.v--modal
+	top: 0 !important
+
+.social_list
+	li
+		margin-bottom: 20px
+		a
+			font-size: 26px
+			display: block
+			text-align: right
+		&:last-child
+			margin-bottom: 0
+
+.nav_list_md
+	li
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+		a
+			+text(NeutraTextTF-Demi, 36, normal, normal)
+			letter-spacing: 1px
+			display: block
+
+.modal_box
+	.nav_list
+		display: block
+		li
+			margin-bottom: 20px
+			&:last-child
+				margin-bottom: 0
+				&:after
+					display: none
+			a
+				+text(NeutraTextTF-Demi, 36, normal, normal)
+				letter-spacing: 1px
+				padding: 0
+				&:after
+					display: none
+
+.modal_content
+	.contacts-form
+		position: relative
+		z-index: 10
+		margin: 0 auto
+
+.close_btn
+	position: absolute
+	display: block
+	background: transparent
+	right: 15px
+	top: 85px
+	z-index: 100
+
+[class*="-figure"] 
+	position: absolute
+	display: none
+	background-color: #1f1f1f
+	z-index: 0
+
+.hide_h
+	display: none
+
+//================================================ FIRST CONTENT
+.first-content
+	height: 100vh
+	padding-top: 182px
+	opacity: 1
+
+.square-figure
+  	width: 95px
+  	height: 91px
+
+.circle-figure
+  	width: 122px
+  	height: 122px
+  	border-radius: 50%
+
+.rectangle-figure
+	width: 133px
+	height: 15px
+
+.triangle-figure
+	border: 53px solid transparent
+	border-top: 92px solid #1f1f1f
+	background: transparent
+
+.skew-figure
+	width: 130px
+	height: 560px
+	transform: skew(-28deg, 0deg)
+	transform-origin: 0 100%
+
+.plus_bit
+	position: absolute
+	display: block
+	width: 70px
+	height: 68px
+	span
+		position: absolute
+		background: #ffd63c
+		width: 100%
+		height: 12px
+		&:nth-of-type(2)
+			transform-origin: 50% 50%
+			transform: rotate(90deg)
+
+.view_first_plus
+	left: -105px
+	top: 90px
+	display: none
+
+.view_second_plus
+	position: relative
+	margin-top: -117px
+	margin-left: -25px	
+
+.view_square
+	right: auto
+	left: 17%
+	top: 35px
+
+.view_triangle
+	left: 50px
+	top: -30px
+
+.circle-plus-figure
+	background: transparent
+
+.view_circle_plus
+	position: absolute
+	right: 0
+	bottom: 131px
+	width: 122px
+	height: 122px
+
+.view_circle
+	position: relative
+
+.view_rectangle
+	left: -110px
+	bottom: 131px
+
+.view_skew
+	left: 410px
+	top: 38px
+
+.view_snake
+	top: 48%
+	right: 190px
+
+h1
+	+text(NeutraTextTF-Bold, 56, 1,bold)
+	margin-bottom: 15px
+
+h2
+	+text(NeutraTextTF-Bold, 56, 1,bold)
+
+h3
+	+text(NeutraTextTF-Bold, 50, 1, bold)	
+
+h4
+	+text(NeutraTextTF-Bold, 42, 1, bold)
+
+h5
+	+text(NeutraTextTF-Bold, 32, 1, bold)
+
+h6
+	+text(NeutraTextTF-Demi, 20, 1, normal)	
+	color: #bcbcbc
+.large_h
+	+text(NeutraTextTF-Book, 82, 1.17, 100)
+
+.view-block
+	position: relative
+	height: 100%
+	display: flex
+	align-items: center
+	h2
+		margin-bottom: 30px
+	h6
+		max-width: 385px
+		margin-bottom: 48px
+		line-height: 1.6
+
+.orange_bit
+	span
+		color: #ffd63c
+
+.btn_coop
+	position: relative
+	display: inline-block
+	transform: translateX(58px)
+	p
+		+text(NeutraTextTF-Demi, 15, 1, bold)
+		background: #181818
+		padding: 4px 0 3px 0
+		display: block
+		line-height: 1
+		transition: .3s linear all
+		transform: translateX(-58px)
+	&:hover
+		.icon_coop
+			div
+				//transform: translateX(5px)
+				transition: .3s linear all
+		p
+			color: #ffd63c
+			transition: .3s linear all
+
+.icon_coop
+	width: 48px
+	height: 48px
+	border: 1px solid #bcbcbc
+	border-radius: 50%
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+	z-index: -1
+	display: flex
+	align-items: center
+	justify-content: center
+	div
+		transition: .3s linear all
+		span
+			position: relative
+			width: 9px
+			height: 9px
+			display: block
+			border-right: 1px solid #bcbcbc
+			border-bottom: 1px solid #bcbcbc
+			transform-origin: 50% 50%
+			transform: rotate(-45deg) 
+			transition: .3s linear all
+
+.stat_list
+	display: flex
+	justify-content: space-between
+	padding-right: 140px
+	position: absolute
+	left: 0
+	bottom: 57px
+	width: 100%
+	.icon-coffe-icon::before 
+		font-size: 25px
+	li
+		padding-left: 50px
+		position: relative
+		.img_stat
+			position: absolute
+			display: block
+			top: 50%
+			transform: translateY(-50%)
+			left: 0
+
+.h_group
+
+	position: relative
+	margin-top: -182px
+
+.number_st
+	+text(NeutraTextTF-Demi, 52, 1, normal)
+	margin-bottom: 10px
+
+.small_p
+	+text(NeutraTextTF-Book, 15, 1, bold)
+	color: #c2c2c2
+//================================================ DEV CONTENT
+.dev-content
+	position: relative
+
+.second_bg
+	height: 800px
+	background: #1f1f1f
+	left: 0
+	top: 290px
+	position: absolute
+	width: 100%
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	transform-origin: 50% 50%
+	transform: skew(-0deg, -15deg)
+	z-index: -3
+	ul
+		display: flex
+		justify-content: space-between
+		padding: 0 10px 0 40px
+		li
+			text-transform: uppercase
+			letter-spacing: 2px
+			transform: skew(0deg, 15deg) rotate(-15deg)
+	.light_words
+		transform: translateY(-65%)
+		li
+			+text(NeutraTextTF-Bold, 54, 1, bold)
+			color: #1f1f1f
+	.dark_words
+		transform: translateY(35%)
+		li
+			+text(NeutraTextTF-Bold, 54, 1, bold)
+			color:  #181818
+
+.dev-block
+	padding: 121px 0 80px 0
+	h2
+		margin-bottom: 107px
+
+.tab_nav_list
+	display: flex
+	justify-content: space-between
+	margin-bottom: 100px
+	li
+		a
+			+text(NeutraTextTF-Bold, 32, 1.31, bold)
+			color: #989aa0
+			position: relative
+			transition: .3s linear all
+			.amount_dev
+				position: absolute
+				display: flex
+				justify-content: center
+				border-radius: 50%
+				background: #ffffff
+				width: 20px
+				+text(NeutraTextTF-Demi, 14, 20px, normal)
+				color: #181818
+				right: -10px
+				top: -8px
+
+.tab_nav_list					
+	li  
+		a.active_mode
+			transition: .3s linear all
+			color: #ffd63c
+			&:after
+				opacity: 1
+				transition: .3s linear all
+
+@keyframes tab_effect_first
+	0%
+		transform: translateX(-100px)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+
+@keyframes tab_effect_second
+	0%
+		transform: translateX(100px)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+
+@keyframes tab_effect_third
+	0%
+		transform: translateY(100px)
+		opacity: 0
+	100%
+		transform: translateY(0)
+		opacity: 1
+
+@keyframes tab_effect_four
+	0%
+		transform: translateY(70px)
+		opacity: 0
+	100%
+		transform: translateY(0)
+		opacity: 1
+
+.notice_dev
+	max-width: 770px
+	margin: 0 auto 89px auto
+	+text(NeutraTextTF-Demi, 24, 1.33, normal)
+	animation-duration: 2s
+	animation-name: tab_effect_four
+	opacity: 1
+
+.tab_info
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	li
+		text-align: center
+		+text(NeutraTextTF-Bold, 28, 1.1,bold)
+		width: 30%
+		animation-duration: 2s
+		&:nth-of-type(1),
+		&:nth-of-type(2)
+			width: 50%
+			margin-bottom: 65px
+		&:nth-of-type(1),
+		&:nth-of-type(3)
+			animation-name: tab_effect_first
+		&:nth-of-type(4)
+			animation-name: tab_effect_third	
+		&:nth-of-type(2),
+		&:last-of-type
+			animation-name: tab_effect_second
+
+.active_tab
+	display: block
+
+.tab_zone
+	margin-bottom: 160px
+
+.priority_zone
+	h3
+		margin-bottom: 32px
+	h6
+		max-width: 385px
+		margin: 0 auto 72px auto
+		line-height: 1.6
+
+.priority_list
+	display: flex
+	justify-content: space-between
+	padding: 0 30px
+	text-align: center
+	margin-bottom: 52px
+	li
+		+text(NeutraTextTF-Demi, 20, 1.6, normal)
+		max-width: 318px
+
+.dev_triangle
+	transform: skew(0deg, 15deg)
+	right: 50%
+	margin-right: -585px
+	top: 45px
+	border-top: 92px solid #181818
+
+.dev_circle_plus
+	left: 50%
+	top: 270px
+	margin-left: -615px
+	transform: skew(0deg, 15deg) translateX(-100%)
+	.view_circle
+		background: #181818
+
+.dev_rectangle
+	background: #181818
+	left: 50%
+	margin-left: -723px
+	transform: skew(0deg, 15deg) translateX(-100%)
+	bottom: 150px
+
+.dev_snake
+	right: 50%
+	margin-right: -585px
+	top: 50%
+	transform: skew(0deg, 15deg) translateX(100%)
+
+.video_box
+	position: relative
+	height: 100%
+	display: block
+
+.main_page_video
+	.img_size
+		height: 100vh
+
+.play_movie
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: 76px
+	height: 76px
+	display: flex
+	justify-content: center
+	align-items: center
+	background: rgba(255, 255, 255, .3)
+	border-radius: 50%
+
+.white_play
+	width: 60px
+	height: 60px
+	display: block
+	background: #ffffff
+	border-radius: 50%
+
+.triangle_play
+	border: 10px solid transparent
+	border-left: 16px solid #181818
+	position: absolute
+	transform: translateX(7px)
+
+.development_part
+	+text(NeutraTextTF-Bold, 32, 1.31, bold)
+	color: #989aa0
+	position: relative
+	display: none
+
+.no_wrap
+	span
+		white-space: nowrap
+
+
+//================================================ PROCESS CONTENT
+.process-content
+	opacity: 0
+.process-block
+	padding: 80px 0
+	h2
+		padding-top: 12vw
+		margin-bottom: 42px
+		.orange_bit
+			display: block
+
+.figure_h
+	max-width: 600px
+
+.process_snake
+	margin-bottom: 170px
+	margin: 0 0 170px 230px
+
+.process_list
+	display: flex
+	flex-direction: column
+	width: 480px
+	padding-top: 60vh
+	li
+		width: 50%
+		height: 240px
+		border: 1px solid #ffffff
+		position: relative
+		transition: .7s linear all
+		&:nth-of-type(even)
+			align-self: flex-end
+			transform: translateX(-1px)
+		div
+			position: absolute
+			width: 100%
+			padding: 0 42px 52px 30px
+			bottom: 0
+		&:hover
+			background: #ffd63c
+			transition: .7s linear all
+			.stage_pr
+				color: #000000
+				transition: .3s linear all
+			.img_pr_list
+				transition: .3s linear all
+				filter: brightness(0)
+				&:before
+					color: #000000
+					transition: .3s linear all
+		.img_pr_list
+			transition: .3s linear all
+			filter: brightness(1)
+			&:before
+				transition: .3s linear all
+
+.pr_flex
+	display: flex
+	justify-content: space-between
+
+.stage_pr
+	+text(NeutraTextTF-Demi, 24, 1, normal)
+	margin-top: 20px
+	transition: .3s linear all
+
+.process_circle_plus
+	right: -51px
+	top: 170px
+	transform: translateX(100%)
+
+.process_triangle
+	left: -32px
+	top: 140px
+	transform: translateX(-100%)
+
+.process_snake
+	display: none
+
+//================================================ PROJECT CONTENT
+.project-block
+	padding: 80px 0
+	h2
+		margin-bottom: 72px
+
+.project_list
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	.project-item
+		background: #1f1f1f
+		width: calc(50% - 15px)
+		margin-bottom: 60px
+		padding: 10px
+		transform: translateY(0px)
+		height: 100%
+		&:nth-of-type(even)
+			margin-top: 90px
+		* 
+			transition: .3s linear all
+			&:hover
+				transition: .3s linear all
+		a
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			padding: 30px
+			.shape_more
+				&:before
+					color: 
+			&:hover
+				background: #ffd63c
+				img
+					transform: scale(.85)
+				h5, .word_more
+					color: #000000
+				.shape_more
+					transform: rotate(-45deg)
+					&:before
+						color: #000000
+						transition: .3s linear all
+		.img_size
+			margin: 0 auto 44px auto
+			width: 400px
+			height: 400px
+			img
+				width: 100%
+				height: 100%
+				object-fit: contain
+		h5
+			margin-bottom: 34px
+
+.info_pr
+	display: flex
+	justify-content: space-between
+
+.word_more
+	+text(NeutraTextTF-Demi, 20, 1, normal)
+
+.shape_more
+	transform-origin: 0% 50%
+	&:before
+		transition: .3s linear all
+
+.project_circle_plus
+	transform: translateX(-100%)
+	left: -42px
+	top: 790px
+
+.project_snake
+	right: -200px
+	top: 1020px
+	position: absolute
+
+.project_snake_2
+	bottom: 970px
+	left: 160px
+
+.project_rectangle
+	left: -20px
+	bottom: 900px
+	z-index: -1
+
+.project_triangle
+	right: -59px
+	transform: translateX(100%)
+	bottom: 770px
+
+.project_circle
+	background: #ffd63c
+	right: 0
+	bottom: 325px
+	transform: translateX(50%)
+
+.project_yellow_triangle
+	left: -40px
+	transform: translateX(-100%)
+	border: 36px solid transparent
+	border-top: 62px solid #ffd63c
+	bottom: 520px
+
+.project-block
+	.project_list
+		li:nth-child(n+6)
+			animation-name: tab_effect_third
+			animation-duration: 1.5s
+
+
+
+//================================================ FEEDBACK CONTENT
+.feedback-content
+	padding: 0 0 0 15px
+	position: relative
+	.container-large
+		max-width: 1770px
+		overflow-x: hidden
+		.hooper-navigation
+			display: none
+	.hooper-slide
+		opacity: 0.35
+		transition: .3s linear all
+		&:hover
+			opacity: 1
+			transition: .3s linear all			
+
+	.hooper-slide.is-current
+		opacity: 1
+		transition: .3s linear all
+
+
+.feedback-block
+	padding: 80px 0
+	h2
+		margin-bottom: 58px
+
+.slide_feed
+	display: flex
+
+.single_fb
+	margin-right: 30px
+	padding-bottom: 70px
+	position: relative
+	background: #1f1f1f
+	transition: .3s linear all
+	flex: 1 0 570px
+	&:hover
+		opacity: 1
+	.large_p
+		+text(NeutraTextTF-Book, 22, 1.33, normal)
+		padding: 0 30px
+		text-align: center
+		margin-bottom: 42px
+	&.active
+		opacity: 1
+		transition: .3s linear all
+
+.movie_bit
+	height: 320px
+	width: 100%
+	display: block
+	position: relative
+	margin-bottom: 52px
+	background: red
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+
+.name_client
+	text-align: center
+	+text(NeutraTextTF-Bold, 32, 1, bold)
+	margin-bottom: 42px
+
+.client_contact
+	padding: 0 40px 0 30px
+	position: absolute
+	width: 100%
+	bottom: 46px
+	left: 0
+	text-align: center
+
+.site_client
+	+text(NeutraTextTF-Demi, 20, 1,  normal)
+	color: #ffd63c
+
+.learn_more
+	+text(NeutraTextTF-Demi, 20, 1, normal)
+
+.feedback-modal
+	position: absolute
+	top: 50px
+	z-index: 2
+	width: 100%
+	height: 800px
+	visibility: hidden
+	opacity: 0
+	background-color: #191919
+	transition: all 0.5s
+	.close
+		color: white
+		position: relative
+		left: 97%
+
+.feedback-modal.visible
+	visibility: visible
+	opacity: 1
+
+//================================================ PARTNERS CONTENT
+.partners-block
+	padding: 80px 0
+	h2
+		margin-bottom: 72px
+
+.partners_list
+	display: flex
+	flex-wrap: wrap
+	li
+		width: 25%
+		min-height: 165px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-right: 1px solid #3e3e3e
+		border-bottom: 1px solid #3e3e3e
+		&:nth-of-type(4),
+		&:nth-of-type(8)
+			border-right: none
+		&:nth-of-type(5),
+		&:nth-of-type(6),
+		&:nth-of-type(7),
+		&:nth-of-type(8)
+			border-bottom: none
+
+//================================================ TEAM CONTENT
+.team-block
+	padding: 80px 0
+	h2
+		margin-bottom: 100px
+
+.squad_zone
+	display: flex
+	justify-content: space-between
+	cursor: pointer
+	.img_size
+		margin-bottom: 32px
+
+.member_name
+	text-align: center
+	transition: .3s linear
+	+text(NeutraTextTF-Book, 26, 1, normal)
+	color: rgba(255, 255, 255, .5)
+	&:hover
+		color: rgba(255, 255, 255, 1)	
+
+.grayscale
+    filter: grayscale(100%)
+    transition: .3s linear
+
+.grayscale:hover
+	filter: grayscale(0)
+	transition: .3s linear
+
+	
+
+
+//================================================ BLOG CONTENT
+.blog-content
+	position: relative
+
+.blog-block
+	padding: 125px 0 90px 0
+	h2
+		margin-bottom: 72px   
+
+.blog_list
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	z-index: 10
+	li
+		width: calc(50% - 15px)
+		position: relative
+		margin-bottom: 72px
+		a
+			color: #ffffff
+			h5
+				margin-bottom: 30px
+				line-height: 1.2
+			.img_size
+				background: #000000
+				height: 608px
+				overflow: hidden
+				img
+					opacity: .4
+					transition: .3s linear all
+					height: 101%
+					width: 100%
+					object-fit: cover
+			&:hover
+				.img_size
+					img
+						opacity: .7
+						transition: .3s linear all
+				.icon-combined-shape
+					transition: transform .5s
+					transform: rotateZ(-45deg)
+
+.desc_p
+	+text(NeutraTextTF-Book, 24, 1.33, normal)
+	margin-bottom: 72px
+
+.news_about
+	padding: 0 35px 42px 42px
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	.desc_p
+		img
+			display: none
+
+.rd_more
+	display: flex
+	justify-content: space-between
+	.icon-combined-shape
+		transform: rotateZ(0deg)
+		transition: transform .5s
+					
+.more_articles
+	display: inline-block
+	overflow: hidden
+	+text(NeutraTextTF-Demi, 20, 1, normal)
+	padding: 22px
+	position: relative
+	background: transparent
+	color: #ffffff
+	&:after
+		content: ''
+		position: absolute
+		display: block
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background: #1f1f1f
+		z-index: -1
+		transform: translateX(calc(62px - 100%))
+		transition: .3s linear all
+	&:hover
+		&:after
+			transform: translateX(calc(0%))
+			transition: .3s linear all
+
+.blog_rectangle
+	right: -75px
+	bottom: 280px
+
+.blog_circle
+	left: -80px
+	top: 185px
+
+.blog_first_plus
+	left: -110px
+	top: 192px
+	display: none
+
+.snake-figure
+	background: transparent
+
+.blog_snake
+	left: -160px
+	bottom: 290px
+
+.blog_snake_2
+	right: -90px
+	top: 320px
+
+.blog-block
+	.blog_list
+		li:nth-child(n+2)
+			animation-name: tab_effect_third
+			animation-duration: 1.5s
+
+
+//================================================ VideoSection
+.video-content 
+	position: relative
+	z-index: 3
+	height: 100vh
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+.video-wrapper
+	width: 100%
+	padding-top: 300px
+
+.video-modal
+	position: fixed
+	top: -105px
+	z-index: 2
+	width: 100%
+	height: 101vh
+	visibility: hidden
+	opacity: 0
+	background-color: #191919
+	transition: all 0.5s
+	transform: translateY(105px)
+	.close
+		color: white
+		position: absolute
+		top: 15px
+		right: 10px
+		z-index: 2
+		display: flex
+		width: 30px
+		transition: all 0.5s linear
+		span
+			width: 3px
+			height: 30px
+			background: white
+			&:first-child
+				transform: matrix(0.71,0.71,-0.71,0.71,5,5)
+			&:last-child
+				transform: matrix(0.71,-0.71,0.71,0.71,3,5)
+	#player
+		height: 100vh
+
+.video-modal.visible
+	visibility: visible
+	opacity: 1
+
+//================================================ canvases 3d Models
+
+.canvas-wrapper
+	position: absolute
+	top: 0
+	width: 100vw
+	z-index: -2
+
+.canvas-container
+	max-width: 1750px
+	margin: auto
+
+.canvas-wrapper
+	width: 100%
+	top: 0px
+
+.process-section-container
+	position: relative
+	z-index: -1
+	left:  -170px
+
+.project-section-container
+	position: relative
+
+.contacts-section-container
+	position: relative
+
+body
+	opacity: 1
+
+.theme-checker 
+	width: 190px
+	height: 50px
+	position: fixed
+	bottom: 0
+	right: 0
+	font-size: 16px
+	border: 2px solid gold
+	cursor: pointer
+	text-align: center
+	padding-top: 7px
+	opacity: 0
+	transition: opacity .5s 
+	z-index: 10
+	&:hover 
+		opacity: 1
+
+.wrapper.cases
+	overflow-x: hidden
+
+.file_change
+	opacity: 0
+
+.text_added
+	font-size: 16px
+	line-height: 30px
+
+.hide_label
+	visibility: hidden
+	position: absolute !important
+
+
+
+.first-content
+	[class*="-figure"]
+		display: block
+
+.dev-content
+	[class*="-figure"]
+		display: block
+
+.process-content
+	[class*="-figure"]
+		display: block
+
+.project-content
+	[class*="-figure"]
+		display: block !important
+
+.feedback-content
+	[class*="-figure"]
+		display: block
+
+.blog-content
+	[class*="-figure"]
+		display: block
+
+.contacts-content
+	[class*="-figure"]
+		display: block
+
+.blog-block 
+	.blog_first_plus
+		background: transparent
+
+.contacts_flex
+	.view_snake-contacts
+		display: block !important
+
+
+
+
+
+
