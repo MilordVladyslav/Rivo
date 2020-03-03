@@ -1,6 +1,6 @@
-# rivo
+# Rivo website
 
-> rivo site
+> HTML, SCSS, Nuxt, three.js, vue, vuex, bounded to api
 
 ## Build Setup
 
