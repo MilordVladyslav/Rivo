@@ -19,7 +19,7 @@
                     Services
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 <a 
                     href="#portfolio"
                     class="link_md"
@@ -27,8 +27,8 @@
                     v-scroll-to="'#portfolio'">
                     Portfolio
                 </a>
-            </li>
-            <li>
+            </li> -->
+            <!-- <li>
                 <a 
                     href="#team-content"
                     class="link_md"
@@ -36,7 +36,7 @@
                     v-scroll-to="'#team-content'">
                     Our team
                 </a>
-            </li>
+            </li> -->
             <li>
                 <a 
                     href="#contacts"

@@ -109,7 +109,7 @@ export default {
 					let scene1 = new ScrollMagic.Scene({
 					triggerElement: "#process_zone",
 					triggerHook: 0,
-					duration:processZoneHeight + 2000,
+					duration:processZoneHeight + 1700,
 					reverse: true,
 					})
 					.setPin("#pinned-element1")

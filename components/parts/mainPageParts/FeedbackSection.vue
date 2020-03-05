@@ -8,7 +8,7 @@
 				<div class="slide_feed" id="slide-feed">
 					<hooper :settings="feedSettings" :infiniteScroll="false" ref="feedbackSlider" :trimWhiteSpace="true" :wheelControl="false" v-if="this.feedDataBind">
 						<slide v-for="(slide, index) in feedbackData" :key="index">
-							<div class="single_fb" v-on:click="switchVideoModal(slide.ACF.video_url)" >
+							<div class="single_fb" v-on:click="switchVideoModal(slide.ACF.video_file)" >
 								<div class="movie_bit">
 									<img :src="slide.fimg_url" alt="" />
 									<span class="play_movie">
@@ -111,6 +111,7 @@ export default {
         switchVideoModal: function (videoLink) {
 			if(typeof videoLink === 'string') {
 				this.currentVideo = videoLink
+				console.log(videoLink)
 			}
             document.querySelector('body').classList.add('hide-scroll')
 

@@ -56,16 +56,13 @@
           </div>
       		<div class="priority_zone" id="priority_zone">
       			<h3 class="tc orange_bit" v-html="pagesData.priorities_heading"></h3>
-      			<h6 class="tc">{{ pagesData['priorities_sub-heading'] }}</h6>
+      			<h6 class="tc" v-html="pagesData['priorities_sub-heading']"></h6>
       			<ul class="priority_list">
-              <li>
-                {{ pagesData.priorities_descr_1 }}
+              <li v-html="pagesData.priorities_descr_1">
               </li>
-              <li>
-                {{ pagesData.priorities_descr_2 }}
+              <li  v-html="pagesData.priorities_descr_2 ">
               </li>
-              <li>
-                {{ pagesData.priorities_descr_3 }}
+              <li  v-html="pagesData.priorities_descr_3 ">
               </li>
             </ul>
       		</div>

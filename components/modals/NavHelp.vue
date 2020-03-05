@@ -11,16 +11,16 @@
                     Services
                 </nuxt-link>                        
             </li>
-            <li>
+            <!-- <li>
                 <nuxt-link :to="{ name: 'index', params: {scrollTo: '#portfolio'} }"> 
                     Portfolio
                 </nuxt-link>
-            </li>
-            <li>
+            </li> -->
+            <!-- <li>
                 <nuxt-link :to="{ name: 'index', params: {scrollTo: '#team-content'} }"> 
                     Our team
                 </nuxt-link>
-            </li>
+            </li> -->
             <li>
                 <nuxt-link :to="{ name: 'index', params: {scrollTo: '#contacts'} }"> 
                     Contacts

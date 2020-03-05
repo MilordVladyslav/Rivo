@@ -7,9 +7,11 @@ module.exports = {
   head: {
     title: 'Rivo agency web site developers company',
     link: [
-      { rel: 'apple-touch-icon', type: 'image/x-icon', href: '/favicon/apple-touch-icon.png' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon-16x16.png' }
+      { rel: 'apple-touch-icon', type: 'image/x-icon', href: '/favicon/apple-touch-icon.png'},
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon-32x32.png'},
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon-16x16.png'},
+      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico'},
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico'},
     ],
     script: [
       { src: 'https://threejs.org/build/three.min.js', defer: true },
@@ -21,7 +23,7 @@ module.exports = {
         resources: 'assets/media.sass',
     }],
     meta: [
-      { property: 'og:image', content: '/favicon/logo_og.png' },
+      { property: 'og:image', content: '/favicon/logo_og.png'},
     ]
   },
   plugins: [

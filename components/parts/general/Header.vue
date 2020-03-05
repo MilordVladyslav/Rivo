@@ -15,12 +15,12 @@
                     <li>
                         <a href="#development" v-scroll-to="'#development'">Services</a>
                     </li>
-                    <li>    
+                    <!-- <li>    
                         <a href="#portfolio" v-scroll-to="'#portfolio'">Portfolio</a>
                     </li>
                     <li>
                         <a href="#team-content" v-scroll-to="'#team-content'">Our team</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="#contacts" v-scroll-to="'#contacts'">Contacts</a>
                     </li>

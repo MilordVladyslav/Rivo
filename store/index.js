@@ -29,14 +29,14 @@ export default ({
 		},
 		getCurrentCase ({commit}) {
 			let searchQueryCase = new URLSearchParams(window.location.search).get('title')
-			axios.get('http://1572834.zorrro.web.hosting-test.net/wp-json/wp/v2/cases?slug=' + searchQueryCase)
+			axios.get('https://api.rivo.agency/wp-json/wp/v2/cases?slug=' + searchQueryCase)
 			.then((res) => { 
 				commit('UPDATE_CURRENT_CASE', res)
 			})
 		},
 		getCurrentBlogpost ({commit}) {
 			let searchQueryBlogpost = new URLSearchParams(window.location.search).get('title')
-			axios.get('http://1572834.zorrro.web.hosting-test.net/wp-json/wp/v2/posts?slug=' + searchQueryBlogpost)
+			axios.get('https://api.rivo.agency/wp-json/wp/v2/posts?slug=' + searchQueryBlogpost)
 			.then((res) => { 
 				commit('UPDATE_CURRENT_BLOGPOST', res)
 			})
@@ -100,27 +100,27 @@ export default ({
 			commit('UPDATE_CURRENT_PAGE', page)
 		},
 		getPages ({commit}) {
-			axios.get(`http://1572834.zorrro.web.hosting-test.net/wp-json/wp/v2/pages/10`).then((response) => {
+			axios.get(`https://api.rivo.agency/wp-json/wp/v2/pages/10`).then((response) => {
 				commit('UPDATE_PAGES_API', response)
 			})	
 		},
 		getCases ({commit}) {
-			axios.get(`http://1572834.zorrro.web.hosting-test.net/wp-json/wp/v2/cases/`).then((response) => {
+			axios.get(`https://api.rivo.agency/wp-json/wp/v2/cases/`).then((response) => {
 				commit('UPDATE_CASES_API', response)
 			})	
 		},
 		getFeedback ({commit}) {
-			axios.get(`http://1572834.zorrro.web.hosting-test.net/wp-json/wp/v2/feedback/`).then((response) => {
+			axios.get(`https://api.rivo.agency/wp-json/wp/v2/feedback/`).then((response) => {
 				commit('UPDATE_FEEDBACK_API', response)
 			})	
 		},
 		getPosts ({commit}) {
-			axios.get(`http://1572834.zorrro.web.hosting-test.net/wp-json/wp/v2/posts/`).then((response) => {
+			axios.get(`https://api.rivo.agency/wp-json/wp/v2/posts/`).then((response) => {
 				commit('UPDATE_POSTS_API', response)
 			})	
 		},
 		getTeam ({commit}) {
-			axios.get(`http://1572834.zorrro.web.hosting-test.net/wp-json/wp/v2/team/`).then((response) => {
+			axios.get(`https://api.rivo.agency/wp-json/wp/v2/team/`).then((response) => {
 				commit('UPDATE_TEAM_API', response)
 			})	
 		},
