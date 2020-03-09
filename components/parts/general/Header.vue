@@ -82,13 +82,13 @@
                     <NavHelp v-else />
                     <ul class="social_list">
                         <li>
-                            <a href="" target="_blank">Facebook</a>
+                            <a href="https://www.facebook.com/rivo.agency/" target="_blank">Facebook</a>
                         </li>
                         <li>
-                            <a href="" target="_blank">Instagram</a>
+                            <a href="https://www.instagram.com/rivo.agency/" target="_blank">Instagram</a>
                         </li>
                         <li>
-                            <a href="" target="_blank">Linkedin</a>
+                            <a href="https://www.linkedin.com/company/rivo-agency" target="_blank">Linkedin</a>
                         </li>
                         <li>
                             <a href="tel:+13477057935" class="link_md">+1.347.705.79.35</a>

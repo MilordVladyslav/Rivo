@@ -54,7 +54,7 @@ $email = new PHPMailer();
 $email->setfrom('you@example.com', 'Your Name'); //Name is optional
 $email->Subject   = 'Rivo';
 $email->Body      = $message;
-$email->AddAddress( 'somemail@gmail.com' );
+$email->AddAddress( 'vladyslav.petrachuk@gmail.com' );
 
 $file_to_attach = 'test.jpeg';
 

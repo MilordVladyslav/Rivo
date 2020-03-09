@@ -136,7 +136,7 @@ import animateCaller from '../../../mixins/animateCaller'
 import sceneMaker from '../../../mixins/sceneMaker'
 import VueScrollTo from 'vue-scrollto'
 import axios from 'axios'
-const querystring = require("querystring");
+// const querystring = require("querystring");
 export default {
     name:'ContactsSection',
     data() {
@@ -240,19 +240,29 @@ export default {
             )
         },
         onSubmit(e) {
-          e.preventDefault();
+          
+          let formData = new FormData();
+          formData.append('form', this.form)
+          e.preventDefault()
              axios.post(
                  "http://test.campeao.pro/test.php",
-                  querystring.stringify(this.form)
+                  formData, 
+                  {
+                    headers: {
+                      'Content-Type': 'multipart/form-data'
+                    }
+                  }
              )
              .then(res => {
                  window.location.href = window.location.origin + '/success';
              });
         },
+
         onChangeFileUpload(){
-          this.file = this.$refs.file.files[0];
+          this.form.fileAttach = this.$refs.file.files[0];
           let uploadText = document.getElementById('upload_text');
           uploadText.innerHTML += this.file.name;
+          console.log(this.form.fileAttach)
           if(this.uploadText != '') {
               document.getElementById("fileUpload_wrap").classList.add('hide_label');
           }
