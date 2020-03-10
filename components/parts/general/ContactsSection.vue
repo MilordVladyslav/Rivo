@@ -78,7 +78,6 @@
                                         title="email@domain.com"
                                         required=""
                                         autocomplete="off"
-                                        pattern="^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$"
                                     />
                                     <label for="email_form" :class="{'hide-visibility': form.email}">Email</label>
                                     <span class="golden_line"></span>
@@ -136,7 +135,7 @@ import animateCaller from '../../../mixins/animateCaller'
 import sceneMaker from '../../../mixins/sceneMaker'
 import VueScrollTo from 'vue-scrollto'
 import axios from 'axios'
-// const querystring = require("querystring");
+const querystring = require("querystring");
 export default {
     name:'ContactsSection',
     data() {
@@ -240,13 +239,14 @@ export default {
             )
         },
         onSubmit(e) {
-          
-          let formData = new FormData();
-          formData.append('form', this.form)
           e.preventDefault()
+          console.log('Дані, що відправляються:')
+          console.log(this.form)
+          console.log('stringify:')
+          console.log(querystring.stringify(this.form))
              axios.post(
-                 "http://test.campeao.pro/test.php",
-                  formData, 
+                 "https://rivo.agency/test.php",
+                  querystring.stringify(this.form), 
                   {
                     headers: {
                       'Content-Type': 'multipart/form-data'
@@ -254,15 +254,14 @@ export default {
                   }
              )
              .then(res => {
-                 window.location.href = window.location.origin + '/success';
+               console.log('Респонс')
+               console.log(res)
              });
         },
-
         onChangeFileUpload(){
           this.form.fileAttach = this.$refs.file.files[0];
           let uploadText = document.getElementById('upload_text');
-          uploadText.innerHTML += this.file.name;
-          console.log(this.form.fileAttach)
+          uploadText.innerHTML += this.form.fileAttach.name
           if(this.uploadText != '') {
               document.getElementById("fileUpload_wrap").classList.add('hide_label');
           }

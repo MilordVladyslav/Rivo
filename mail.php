@@ -40,7 +40,7 @@ $message .= "
 ";
 
 
-//$to_email = 'vitovstreet@gmail.com';
+//$to_email = 'toemail@gmail.com';
 // $subject = 'Rivo';
 // $headers[] = 'MIME-Version: 1.0';
 // $headers[] = 'Content-type: text/html; charset=UTF-8';
@@ -54,7 +54,7 @@ $email = new PHPMailer();
 $email->setfrom('you@example.com', 'Your Name'); //Name is optional
 $email->Subject   = 'Rivo';
 $email->Body      = $message;
-$email->AddAddress( 'vladyslav.petrachuk@gmail.com' );
+$email->AddAddress( 'some@gmail.com' );
 
 $file_to_attach = 'test.jpeg';
 
@@ -63,7 +63,3 @@ $email->AddAttachment( $file_to_attach , 'test.jpeg' );
 return $email->Send();
 
 ?>
-
-
-
-

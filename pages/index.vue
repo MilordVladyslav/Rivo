@@ -29,13 +29,13 @@
           :pagesData = "getPageInfo"
           v-on:update-mounted-components="updateMountedComponents"
         />
-        <!-- <ProjectSection
+        <ProjectSection
           :pivot = "pivot"
           :colors = "getFiguresColor" 
           :pagesData = "getPageInfo" 
           :casesData = "getCaseInfo"
           v-on:update-mounted-components="updateMountedComponents"
-        /> -->
+        />
         <FeedbackSection 
           :pagesData = "getPageInfo"
           :feedbackData = "getFeedbackInfo"
