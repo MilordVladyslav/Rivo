@@ -33,92 +33,7 @@
                 <div class="snake-figure view_snake-contacts" v-show="this.figures2d">
                     <img src="~@/assets/svg-icon/snake.svg" alt="" />
                 </div>
-                <div class="contacts-form">
-                    <form method="POST" @submit="onSubmit">
-                        <input type="hidden" name="project_name" value="Rivo">
-                        <input type="hidden" name="admin_email" value="vitovstreet@gmail.com">
-                        <input type="hidden" name="form_subject" value="Form">
-                        <div class="fields">
-                            <p>
-                                <span class="field">
-                                   <input 
-                                        v-model="form.name"
-                                        type="text" id="name_client"
-                                        class="head-field" 
-                                         autocomplete="off"
-                                        name="name" 
-                                        required="" 
-                                    />
-                                   <label for="name_client" :class="{'hide-visibility': form.name}">Name</label>
-                                   <span class="golden_line"></span>
-                                </span>
-                            </p>
-                            <p>
-                                <span class="field">
-                                   <input 
-                                        v-model="form.company"
-                                        type="text" id="company_form"
-                                        class="head-field"
-                                        name="company"
-                                        autocomplete="off"
-                                        placeholder=""
-                                        required=""
-                                    />
-                                   <label for="company_form" :class="{'hide-visibility': form.company}">Company</label>
-                                   <span class="golden_line"></span>
-                                </span>
-                            </p>
-                            <p>
-                                <span class="field">
-                                   <input
-                                        v-model="form.email"
-                                        type="email" id="email_form"
-                                        class="head-field"
-                                        name="email"
-                                        title="email@domain.com"
-                                        required=""
-                                        autocomplete="off"
-                                    />
-                                    <label for="email_form" :class="{'hide-visibility': form.email}">Email</label>
-                                    <span class="golden_line"></span>
-                                </span>
-                            </p>
-                            <p>
-                                <span class="field">
-                                    <input
-                                        v-model="form.country"
-                                        type="text"
-                                        id="country_form"
-                                        class="head-field"
-                                        name="country"
-                                        autocomplete="off"
-                                        required=""
-                                    />
-                                    <label for="country_form" :class="{'hide-visibility': form.country}">Country</label>
-                                    <span class="golden_line"></span>
-                                </span>
-                            </p>
-                            <div class="attach-file">
-                                <div>
-                                    <label id="fileUpload_wrap" class="label-wrapper">
-                                        <img src="~@/assets/svg-icon/attach-icon.svg" alt="" />
-                                        Attach file
-                                        <input
-                                          type="file"
-                                          class="file_change"
-                                          id="fileUpload"
-                                          ref="file"
-                                          @change="onChangeFileUpload()"
-                                        />
-                                    </label>
-                                    <div id="upload_text" class="text_added"></div>
-                                </div>
-                            </div> 
-                        </div>  
-                        <input type="hidden" class="pacet" name="type form" value="Standard form">
-                        <button class="common_btn" type="submit">Send mail</button>
-                    </form>
-                </div>
+                <FeedbackForm />
             </div>
             <div class="plus_bit view_plus-contacts" v-show="this.figures2d">
               <span></span>
@@ -133,11 +48,14 @@
 import { TweenMax, TimelineMax, Power3, TweenLite, } from 'gsap'
 import animateCaller from '../../../mixins/animateCaller'
 import sceneMaker from '../../../mixins/sceneMaker'
+import FeedbackForm from '@/components/parts/general/FeedbackForm'
 import VueScrollTo from 'vue-scrollto'
-import axios from 'axios'
 const querystring = require("querystring");
 export default {
     name:'ContactsSection',
+    components: {
+      FeedbackForm
+    },
     data() {
         return {
           figures2d: true,
@@ -238,34 +156,6 @@ export default {
                 this.rendererContacts
             )
         },
-        onSubmit(e) {
-          e.preventDefault()
-          console.log('Дані, що відправляються:')
-          console.log(this.form)
-          console.log('stringify:')
-          console.log(querystring.stringify(this.form))
-             axios.post(
-                 "https://rivo.agency/test.php",
-                  querystring.stringify(this.form), 
-                  {
-                    headers: {
-                      'Content-Type': 'multipart/form-data'
-                    }
-                  }
-             )
-             .then(res => {
-               console.log('Респонс')
-               console.log(res)
-             });
-        },
-        onChangeFileUpload(){
-          this.form.fileAttach = this.$refs.file.files[0];
-          let uploadText = document.getElementById('upload_text');
-          uploadText.innerHTML += this.form.fileAttach.name
-          if(this.uploadText != '') {
-              document.getElementById("fileUpload_wrap").classList.add('hide_label');
-          }
-        },
     },
     beforeDestroy() {
       this.rendererContacts.forceContextLoss()
@@ -276,4 +166,3 @@ export default {
     props: ['pivot', 'colors']
 }
 </script>
-
