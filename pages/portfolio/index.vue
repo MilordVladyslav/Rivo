@@ -155,6 +155,18 @@
             </div>
           </div>
         </section>
+        <section class="total">
+          <p>Total</p>
+          <div class="statistics">
+            <div class="statistic-item">
+              <div class="hightlight">
+                <p>23k</p>
+                <p>written lines of code</p>
+              </div>
+              
+            </div>
+          </div>
+        </section>
       </div>
       <!-- <img src="@/assets/images/cartrailer.png" alt="cartrailer"> -->
     </div>
