@@ -156,14 +156,78 @@
           </div>
         </section>
         <section class="total">
-          <p>Total</p>
-          <div class="statistics">
-            <div class="statistic-item">
-              <div class="hightlight">
-                <p>23k</p>
-                <p>written lines of code</p>
+            <div class="container">
+              <div class="statistics">
+              <p class="hightlight">Total</p>
+                <div class="items-wrapper">
+                    <div class="items">
+                      <div class="statistics-item">
+                        <div>
+                          <p class="amount">14</p>
+                          <p class="amount-underlight">unique pages designed</p>
+                          <p class="amount-description">
+                            Elit officia occaecat culpa elit commodo deserunt 
+                            labore officia aliqua. Minim officia incididunt sunt 
+                            mollit voluptate. Veniam ut irure consequat nisi magna.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="statistics-item">
+                        <div>
+                          <p class="amount">23k</p>
+                          <p class="amount-underlight">written lines of code</p>
+                          <p class="amount-description">
+                             Eiusmod adipisicing culpa dolor in eu. 
+                             Anim eu cillum et aute enim. Tempor aute sunt incididunt 
+                             labore aliqua dolor proident duis excepteur 
+                             ea eu quis veniam ullamco.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="statistics-item">
+                        <div>
+                          <p class="amount">3</p>
+                          <p class="amount-underlight">Team members involved</p>
+                          <p class="amount-description">
+                            Sunt aute ex commodo deserunt consequat commodo 
+                            non do incididunt nisi. Do minim culpa nisi 
+                            deserunt veniam ullamco anim pariatur cupidatat irure aute.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="statistics-item">
+                        <div>
+                          <p class="amount">1</p>
+                          <p class="amount-underlight">Month of work</p>
+                          <p class="amount-description">
+                            Aute dolore eiusmod adipisicing id laborum non aliqua nulla. Laborum esse voluptate quis veniam fugiat esse.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               </div>
-              
+            </div>
+        </section>
+        <section class="screenshots">
+          <div>
+            <img src="@/assets/images/maskgroup.png"/>
+          </div>
+        </section> 
+        <section class="more-cases">
+          <div class="container">
+            <p class="hightlight">More <span>Cases</span></p>
+            <div>
+              <ul>
+                <li> <a href="#"> Meltdown Game </a> </li>
+                <li> <a href="#"> Royal House </a> </li>
+                <li> <a href="#"> Monaco Lux  Garage </a> </li>
+                <li> <a href="#"> Omegaaa </a> </li>
+                <li> <a href="#"> Saltmine </a> </li>
+                <li> <a href="#"> Premier logistics </a> </li>
+                <li> <a href="#"> Spc Uticany </a> </li>
+                <li> <a href="#"> Farmstead </a> </li>
+              </ul>
             </div>
           </div>
         </section>
@@ -186,6 +250,68 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+  .more-cases
+    padding-bottom: 110px
+    .hightlight
+      margin-bottom: 100px
+    li
+      border-top: 1px solid #3C3C3C
+      padding-top: 10px
+      margin-bottom: 50px
+      a
+        display: block
+        background-image: url('../../assets/images/arrow-down.png')
+        background-repeat: no-repeat
+        background-position-x: 100%
+        background-position-y: 50%
+        font-size: 48px
+        &:hover
+         color:  #ffd63c
+    span
+      color: #ffd63c
+
+  .screenshots
+    margin: 180px
+    display: flex
+    justify-content: center
+    img
+      filter: grayscale(1)
+      width: 100vw
+  .total 
+    margin-top: 120px
+    .items-wrapper
+      display: flex
+      justify-content: flex-end
+    .items 
+      display: flex
+      justify-content: space-between
+      max-width: 910px
+      flex-wrap: wrap
+    .statistics-item:nth-child(odd)
+      margin-top: 220px
+      margin-right: 120px
+    .statistics-item
+      .amount
+        color: #181818
+        font-weight: bold
+        font-size: 120px
+        text-shadow: -2px -2px 0 #FFD63C, 2px -2px 0 #FFD63C, -2px 2px 0 #FFD63C, 2px 2px 0 #FFD63C
+      .amount-underlight
+        box-sizing: border-box
+        padding-right: 120px
+        font-size: 24px
+        font-weight: bold
+        text-transform: uppercase
+        color: #FFD63C
+      .amount-description
+        line-height: 1.8
+        margin-top: 20px
+      max-width: 390px
+      
+  .hightlight
+    font-size: 80px
+    font-weight: bold
+
   .feedback
     padding-top: 187px
     font-size: 80px
@@ -356,7 +482,6 @@ export default {
     font-size: 18rem
     font-weight: bold
   .content
-    height: 8300px
     &::before
       content: ""
       background: linear-gradient(180deg, #1E1E1E 0%, rgba(30, 30, 30, 0) 100%), url('../../assets/images/background-portfolio.jpeg')
