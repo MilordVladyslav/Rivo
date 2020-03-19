@@ -20,7 +20,6 @@ module.exports = {
     ],
     css: ['nuxt-sass-resources-loader', {
         resources: 'assets/main.sass',
-        resources: 'assets/media.sass',
     }],
     meta: [
       { property: 'og:image', content: '/favicon/logo_og.png'},
