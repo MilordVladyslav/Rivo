@@ -8,13 +8,13 @@
     <Header></Header>
     <div class="content">
       <div class="container-portfolio">
-        <section class="title-screen">
+        <!-- <section class="title-screen">
           <div class="title-wrapper">
             <p class="background-title">Haul Cars</p>
             <p class="front-title">Haul Cars</p>
             <img src="@/assets/images/cartrailer.png" alt="cartrailer">
           </div>
-        </section>
+        </section> -->
         <section class="description">
           <div class="container">
             <div class="description-content">
@@ -58,7 +58,7 @@
             </div>
           </div>
         </section>
-        <section class="discovery-planning">
+        <!-- <section class="discovery-planning">
           <div class="container">
             <div class="discovery-planning-content">
               <div class="text">
@@ -79,8 +79,8 @@
               </p>
             </div>
           </div>
-        </section>
-        <section class="technologies">
+        </section> -->
+        <!-- <section class="technologies">
           <div class="container">
             <p class="title">Technologies</p>
             <div class="technologies-list">
@@ -146,16 +146,16 @@
               </div>
             </div>
           </div>
-        </section>
-        <section class="feedback">
+        </section> -->
+        <!-- <section class="feedback">
           <div class="container">
             <p>Feedback</p>
             <div class="feedback-video-wrapper">
               <img src="@/assets/images/video.png" alt="video">
             </div>
           </div>
-        </section>
-        <section class="total">
+        </section> -->
+        <!-- <section class="total">
             <div class="container">
               <div class="statistics">
               <p class="hightlight">Total</p>
@@ -208,13 +208,13 @@
                   </div>
               </div>
             </div>
-        </section>
-        <section class="screenshots">
+        </section> -->
+        <!-- <section class="screenshots">
           <div>
             <img src="@/assets/images/maskgroup.png"/>
           </div>
-        </section> 
-        <section class="more-cases">
+        </section>  -->
+        <!-- <section class="more-cases">
           <div class="container">
             <p class="hightlight">More <span>Cases</span></p>
             <div>
@@ -230,7 +230,7 @@
               </ul>
             </div>
           </div>
-        </section>
+        </section> -->
       </div>
       <!-- <img src="@/assets/images/cartrailer.png" alt="cartrailer"> -->
     </div>
@@ -468,10 +468,14 @@ export default {
     align-items: center
     position: relative
     width: 100%
+    img 
+      max-width: 37%
+
+
   .background-title
     position: absolute
     font-weight: bold
-    font-size: calc(16vw) 
+    font-size: 16vw
     white-space: pre
     z-index: -1
     color: #181818
@@ -479,7 +483,7 @@ export default {
   .front-title
     margin-top: 75px
     position: absolute
-    font-size: 18rem
+    font-size: 12vw
     font-weight: bold
   .content
     &::before

@@ -23,7 +23,10 @@ module.exports = {
         resources: 'assets/media.sass',
     }],
     meta: [
-      { property: 'og:image', content: '/favicon/logo_og.png'},
+      { 
+        property: 'og:image', content: '/favicon/logo_og.png',
+        name: "viewport", content: "width=device-width, initial-scale=1.0"
+      },
     ]
   },
   plugins: [

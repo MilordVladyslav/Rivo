@@ -86,6 +86,11 @@
 	.blogtext-block
 		padding: 100px 15px
 
+	.description
+		.description-content
+			flex-direction: column
+			.description-text
+				padding-left: 0
 
 @media only screen and (max-width : 1090px)
 	.content_blogpost
@@ -98,6 +103,14 @@
 					max-width: 100%
 				div
 					width: 100%
+	
+	.title-screen
+		.title-wrapper
+			img
+				max-width: 100%
+		.front-title
+			margin-top: 0
+
 
 
 
@@ -210,6 +223,11 @@
 		animation-name: tab_effect_third
 	.first-content [class*="-figure"], .dev-content [class*="-figure"], .blog_snake
 		display: none
+	
+	.content
+		.title-screen
+			height: auto
+			padding-top: 158px
 
 @media only screen and (max-width : 768px)
 	.project_list .project-item .img_size
@@ -478,6 +496,9 @@
 		padding: 0 15px
 	.view_snake-contacts-middle
 		display: none !important
+	.front-title
+		margin-top: 0
+		font-size: 62px
 
 
 @media only screen and (max-width : 480px)
