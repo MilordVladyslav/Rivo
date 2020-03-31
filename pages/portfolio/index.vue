@@ -8,13 +8,13 @@
     <Header></Header>
     <div class="content">
       <div class="container-portfolio">
-        <!-- <section class="title-screen">
+        <section class="title-screen">
           <div class="title-wrapper">
             <p class="background-title">Haul Cars</p>
             <p class="front-title">Haul Cars</p>
             <img src="@/assets/images/cartrailer.png" alt="cartrailer">
           </div>
-        </section> -->
+        </section>
         <section class="description">
           <div class="container">
             <div class="description-content">
@@ -37,10 +37,12 @@
             </div>
             <div class="description-planning">
               <div class="planning-list">
-                <li>Brand strategy</li>
-                <li>Development</li>
-                <li>Experience design</li>
-                <li>User interface design</li>
+                <ul>
+                  <li>Brand strategy</li>
+                  <li>Development</li>
+                  <li>Experience design</li>
+                  <li>User interface design</li>
+                </ul>
               </div>
               <div>
                 <p class="story">

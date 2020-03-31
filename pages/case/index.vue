@@ -113,6 +113,9 @@ export default {
 		}
 	},
 	mounted() {
+		setTimeout(() => {
+			console.log(this.casesData)
+		}, 1500)
 		this.$store.dispatch('getCurrentCase');
 		this.receive3Dmodels()
 		let searchQueryCase = new URLSearchParams(window.location.search).get('title')

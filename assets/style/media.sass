@@ -89,8 +89,16 @@
 	.description
 		.description-content
 			flex-direction: column
-			.description-text
-				padding-left: 0
+			.text
+				font-size: 32px
+			.images
+				justify-content: center
+				.left
+					margin: 0
+				.right
+					display: flex
+		.description-planning
+			padding-top: 0
 
 @media only screen and (max-width : 1090px)
 	.content_blogpost
@@ -111,6 +119,8 @@
 		.front-title
 			margin-top: 0
 
+	.description
+		margin-top: 30px
 
 
 
@@ -228,6 +238,29 @@
 		.title-screen
 			height: auto
 			padding-top: 158px
+			
+	.description
+		.description-planning
+			flex-direction: column
+			div
+				.story
+					text-align: center
+					max-width: 100%
+			.planning-list
+				ul
+					display: flex
+					justify-content: space-around
+					li::before
+						display: none 
+		.description-content
+			flex-direction: column
+			.description-text 
+				justify-content: center
+				padding-left: 0
+
+
+
+
 
 @media only screen and (max-width : 768px)
 	.project_list .project-item .img_size
@@ -384,6 +417,37 @@
 		display: none !important
 	.snake-figure.project_snake_2
 		display: none !important
+	
+
+	.container-portfolio
+		.description
+			.description-content
+				.text 
+					font-size: 22px
+					line-height: 1.5
+				.images
+					margin-bottom: 20px
+					flex-direction: column
+					align-items: center
+					.left
+						justify-content: center
+					.right
+						flex-direction: column
+						justify-content: center
+						div:first-child
+							margin-bottom: 0
+			
+			.description-planning
+				padding-top: 0
+				padding-bottom: 20px
+
+			.planning-list
+				margin-bottom: 20px
+				ul
+					flex-direction: column
+					li 
+						line-height: 2
+						text-align: center
 
 
 @media only screen and (max-width : 700px)
