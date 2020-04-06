@@ -86,6 +86,27 @@
 	.blogtext-block
 		padding: 100px 15px
 
+	.content
+		.description
+			.description-content
+				flex-direction: column
+				.description-text
+					padding-left: 0
+					justify-content: center
+				.text
+					font-size: 32px
+					text-align: center
+				.images
+					justify-content: center
+					.left
+						margin: 0
+					.right
+						display: flex
+	
+	.technologies
+		.technologies-list
+			justify-content: center
+
 
 @media only screen and (max-width : 1090px)
 	.content_blogpost
@@ -98,12 +119,374 @@
 					max-width: 100%
 				div
 					width: 100%
+	
+	.title-screen
+		.title-wrapper
+			img
+				max-width: 100%
+		.front-title
+			margin-top: 0
+
+	.description
+		margin-top: 30px
+	.discovery-planning-content
+		flex-direction: column
+
+
+@media only screen and (max-width : 992px)
+	.nav_list
+		display: none
+	.logo_nav .nav_list
+		display: none
+	h1
+		margin-bottom: 10px
+		font-size: 6.5vw
+	h2
+		font-size: 6.5vw
+	.view-block
+		h2
+			margin-bottom: 15px
+		h6
+			margin-bottom: 30px
+			line-height: 1.4
+	.skew-figure, .view_snake
+		display: none
+	.view_square
+		right: 15px
+	.view_rectangle
+		left: 15px
+	.tab_nav_list
+		li
+			a
+				font-size: 30px
+	.stat_list
+		li
+			padding-left: 45px
+	.number_st
+		font-size: 48px
+	.tab_nav_list
+		flex-wrap: wrap
+		margin-bottom: 40px
+		li
+			width: 33%
+			text-align: center
+			margin-bottom: 20px
+	.dev-block
+		h2
+			margin-bottom: 50px
+	.notice_dev
+		margin: 0 auto 40px auto
+	.tab_info
+		li
+			font-size: 28px
+			width: 50%
+			padding: 0 10px
+			margin-bottom: 30px
+	.tab_info li:nth-of-type(1), .tab_info li:nth-of-type(2)
+		padding: 0 10px
+		margin-bottom: 30px
+	.tab_info
+		li:nth-of-type(5)
+			margin: 0 auto
+	.priority_list
+		padding: 0
+		li
+			line-height: 1.4
+			padding: 0 10px
+	.process-content
+		opacity: 1
+	.video-wrapper
+		position: relative
+		padding-top: 0
+	.process_list
+		padding-top: 0
+		width: 400px
+		li
+			height: 200px
+			div
+				padding: 0 32px 22px 20px
+	.stage_pr
+		font-size: 22px
+	.process-block
+		h2
+			font-size: 7vw
+	.news_about
+		padding: 0 25px 32px 32px
+	.team-block
+		h2
+			margin-bottom: 60px
+	.learn_more
+		min-width: 97px
+	.process_snake
+		margin: 0 0 150px 0
+	.process_circle_plus
+		top: 120px
+	.figure_h
+		max-width: 350px
+	.success_page
+		.view_snake-contacts2
+			display: none
+	.success_triangle-left
+		display: none !important
+	.success_page .view_snake-contacts
+		left: 5%
+	.success_circle_plus
+		right: 7%
+	.success_page .success_plus
+		top: 20%
+	.video-wrapper
+		transform: none !important
+	.tab_info li:nth-of-type(4)
+		animation-name: tab_effect_second
+	.tab_info li:nth-of-type(5)
+		animation-name: tab_effect_third
+	.first-content [class*="-figure"], .dev-content [class*="-figure"], .blog_snake
+		display: none
+	
+	.content
+		.title-screen
+			height: auto
+			padding-top: 158px
+			
+	.description
+		.description-planning
+			flex-direction: column
+			div
+				.story
+					text-align: center
+					max-width: 100%
+			.planning-list
+				ul
+					display: flex
+					justify-content: space-around
+					li::before
+						display: none 
+		.description-content
+			flex-direction: column
+			.description-text 
+				justify-content: center
+				padding-left: 0
+	.content
+		.technologies
+			.container
+				.title
+					font-size: 42px
+					text-align: center
+					margin-left: 0
+
+
+
 
 
 @media only screen and (max-width : 768px)
-	.portfolio
-		background: green
+	.project_list .project-item .img_size
+		width: auto
+	.blogtext-block .blog_second_triangle
+		display: none
+	.h_group
+		margin-top: -120px
+	.first-content
+		padding-top: 120px
+	.number_st
+		font-size: 40px
+	.stat_list
+		li
+			padding-left: 35px
+			width: 24%
+			.img_stat
+				font-size: 16px
+	.pr_flex
+		display: block
+	.process-block
+		h2
+			padding-top: 0
+			.orange_bit
+				display: inline-block
+	.process_list
+		width: 100%
+		li
+			height: 170px
+	.tab_nav_list
+		li
+			margin-bottom: 15px
+	.notice_dev
+		text-align: left
+		margin: 0 0 30px 0
+	.tab_info
+		li
+			width: 100%
+			text-align: left
+			margin-bottom: 10px
+			padding: 0
+			font-size: 26px
+			&:last-of-type
+				margin-bottom: 10px
+			&:nth-of-type(4)
+				order: 2
+	.tab_info li:nth-of-type(1), .tab_info li:nth-of-type(2)
+		width: 100%
+		margin-bottom: 10px
+		padding: 0
+	.project-content
+		.project_list
+			.project-item
+				margin-bottom: 40px
+				&:nth-of-type(even)
+					margin-top: 40px
+				.img_size
+					height: 200px
+	.blog_list
+		li
+			a
+				.img_size
+					height: 450px
+	.news_about
+		padding: 0 15px 22px 22px
+	.desc_p
+		line-height: 1.2
+		margin-bottom: 50px
+	.team-block h2, .blog-block h2, .partners-block h2, .feedback-block h2, .process-block h2, .project-block h2
+		margin-bottom: 50px
+	h2
+		margin-bottom: 50px
+	.tab_nav_list
+		margin-bottom: 30px
+	.feedback-content
+		.container-large
+			.hooper-navigation
+				display: flex
+				position: absolute
+				width: 100%
+				padding-right: 30px
+				bottom: 0
+				transform: translateY(100%)
+			.hooper-list
+				padding: 0 0 60px 0
+	.team-content
+		.hooper-navigation
+			display: flex
+			position: absolute
+			width: 100%
+			padding: 0 15px
+			bottom: 0
+			transform: translateY(100%)
+		.hooper-list
+			padding: 0 0 60px 0
+	.process-block
+		h2
+			font-size: 7vw
+			text-align: center
+	.process_snake, .process_circle_plus, .rectangle-figure, .blog_snake
+		display: none
+	.figure_h
+		max-width: 100%
+	.light_words, .dark_words, .second_bg ul
+		display: none
+	.content_blogpost
+		.blg_bit
+			.txt_space
+				div
+					p
+						line-height: 1.4
+	.blogtext-block
+		h5
+			line-height: 1.2
+			margin: 0 0 90px 0
+			max-width: 100%
+			text-align: left
+	.blogtext-block .case_second_plus
+		display: none
+	.modal_content.contacts-content
+		position: relative
+		display: flex 
+		flex-direction: column-reverse
+		justify-content: center
+		max-width: 500px
+		margin: 0 auto
+		.reference-zone
+			width: 100%
+			display: flex
+			justify-content: space-between
+			h2
+				display: none
+				position: relative !important
+		.hide_h
+			display: block
+			order: 3
+			position: relative !important
+			top: auto
+			margin-bottom: 20px
+			font-size: 7vw
+		.view_triangle-contacts-left
+			display: none
+		.logo-link
+			margin: 0 20px 0 0
+	.modal_content.contacts-content .case_desc_circle_plus
+		display: none
+	.process-block h2
+		max-width: 100%
+	.feedback-content
+		padding: 0
+	.process-content [class*="-figure"]
+		display: none
+	.contacts_flex .view_snake-contacts, .blog_snake
+		display: none !important
+	.snake-figure.project_snake_2
+		display: none !important
+	
 
+	.container-portfolio
+		.description
+			.description-content
+				.text 
+					font-size: 32px
+					line-height: 1.5
+				.images
+					margin-bottom: 20px
+					flex-direction: column
+					align-items: center
+					.left
+						justify-content: center
+					.right
+						flex-direction: column
+						justify-content: center
+						div:first-child
+							margin-bottom: 0
+			
+			.description-planning
+				padding-top: 0
+
+
+			.planning-list
+				margin-bottom: 20px
+				ul
+					flex-direction: column
+					li 
+						line-height: 2
+						text-align: center
+
+@media screen and ( max-width: 930px ) 
+	.total
+		.items-wrapper
+			.items
+				.statistics-item
+					margin: 0
+					max-width: 47%
+
+@media screen and ( max-width: 660px ) 
+	.total
+		.hightlight
+			font-size: 42px
+		.items-wrapper
+			.items
+				.amount
+					font-size: 35px
+					text-shadow: -1px -1px 0 #FFD63C, 1px -1px 0 #FFD63C, -1px 1px 0 #FFD63C, 1px 1px 0 #FFD63C
+				.amount-underlight
+					font-size: 18px
+				.statistics-item
+					max-width: 100%
+					margin: 20px 0
 
 @media only screen and (max-width : 700px)
 	h1
@@ -215,8 +598,32 @@
 		padding: 0 15px
 	.view_snake-contacts-middle
 		display: none !important
+	.front-title
+		margin-top: 0
+		font-size: 62px
+	.discovery-planning
+		.discovery-planning-content
+			.text
+				p
+					font-size: 46px
+	
+	.feedback
+		padding-top: 80px
+		p
+			font-size: 42px
+	.container-portfolio
+		.screenshots
+			margin: 80px
 
-
+	.more-cases
+		.container
+			.hightlight
+				font-size: 42px
+				margin-bottom: 20px
+			li
+				margin-bottom: 30px
+				a 
+					font-size: 22px
 
 @media only screen and (max-width : 480px)
 	.first-content
@@ -448,6 +855,36 @@
 	.blog_list li a h5
 		margin-bottom: 20px
 	
+	.container-portfolio
+		.description
+			.description-content
+				.text 
+					font-size: 22px
+					line-height: 1.5
+		.description-planning
+			padding-top: 0
+			padding-bottom: 50px
+		
+		.discovery-planning
+			.container
+				.description-wrapper
+					padding-top: 50px
+	
+	.content
+		.container-portfolio
+			.technologies
+				padding-top: 50px
+
+	.content	
+		.feedback
+			padding-top: 80px
+			p
+				text-align: center
+				font-size: 42px
+	.statistics
+		.hightlight
+			text-align: center
+
 
 @media only screen and (max-height: 750px)
 	.view_snake, .view_skew

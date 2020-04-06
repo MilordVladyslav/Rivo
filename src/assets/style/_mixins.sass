@@ -1,0 +1,21 @@
+// =link($link, $visit, $hover, $active)
+// 	color: $link
+// 	&:visited
+// 		color: $visit
+// 	&:hover
+// 		color: $hover
+// 	&:active
+// 		color: $active
+
+@mixin text($font-family, $font-size, $line-height, $font-weight)
+	font-family: '#{$font-family}', sans-serif
+	font-size: $font-size +px
+	line-height: $line-height
+	font-weight: $font-weight
+
+@mixin font-include($font)
+	@font-face
+		font-family: '#{$font}'
+		src: url('./assets/fonts/#{$font}/#{$font}.eot')
+		src: url('./assets/fonts/#{$font}/#{$font}.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/#{$font}/#{$font}.woff2') format('woff2'), url('./assets/fonts/#{$font}/#{$font}.woff') format('woff'), url('./assets/fonts/#{$font}/#{$font}.ttf')  format('truetype'), url('./assets/fonts/#{$font}/#{$font}.svg#svgFontName') format('svg')
+

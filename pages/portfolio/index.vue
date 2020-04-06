@@ -1,8 +1,6 @@
-<style lang="sass">
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap&subset=cyrillic')
-</style>
+
 <template>
-  <div class="portfolio">
+  <div>
     <Header></Header>
     <div class="content">
       <div class="container-portfolio">
@@ -10,10 +8,10 @@
           <div class="title-wrapper">
             <p class="background-title">Haul Cars</p>
             <p class="front-title">Haul Cars</p>
-            <img src="@/assets/images/cartrailer.png" alt="cartrailer" class="first-screen-image">
+            <img src="@/assets/images/cartrailer.png" alt="cartrailer">
           </div>
         </section>
-        <!-- <section class="description">
+        <section class="description">
           <div class="container">
             <div class="description-content">
               <div class="description-text">
@@ -35,10 +33,12 @@
             </div>
             <div class="description-planning">
               <div class="planning-list">
-                <li>Brand strategy</li>
-                <li>Development</li>
-                <li>Experience design</li>
-                <li>User interface design</li>
+                <ul>
+                  <li>Brand strategy</li>
+                  <li>Development</li>
+                  <li>Experience design</li>
+                  <li>User interface design</li>
+                </ul>
               </div>
               <div>
                 <p class="story">
@@ -55,8 +55,8 @@
               </div>
             </div>
           </div>
-        </section> -->
-        <!-- <section class="discovery-planning">
+        </section>
+        <section class="discovery-planning">
           <div class="container">
             <div class="discovery-planning-content">
               <div class="text">
@@ -77,8 +77,8 @@
               </p>
             </div>
           </div>
-        </section> -->
-        <!-- <section class="technologies">
+        </section>
+        <section class="technologies">
           <div class="container">
             <p class="title">Technologies</p>
             <div class="technologies-list">
@@ -144,16 +144,16 @@
               </div>
             </div>
           </div>
-        </section> -->
-        <!-- <section class="feedback">
+        </section>
+        <section class="feedback">
           <div class="container">
             <p>Feedback</p>
             <div class="feedback-video-wrapper">
               <img src="@/assets/images/video.png" alt="video">
             </div>
           </div>
-        </section> -->
-        <!-- <section class="total">
+        </section>
+        <section class="total">
             <div class="container">
               <div class="statistics">
               <p class="hightlight">Total</p>
@@ -206,13 +206,13 @@
                   </div>
               </div>
             </div>
-        </section> -->
-        <!-- <section class="screenshots">
+        </section>
+        <section class="screenshots">
           <div>
             <img src="@/assets/images/maskgroup.png"/>
           </div>
-        </section>  -->
-        <!-- <section class="more-cases">
+        </section>
+        <section class="more-cases">
           <div class="container">
             <p class="hightlight">More <span>Cases</span></p>
             <div>
@@ -228,11 +228,11 @@
               </ul>
             </div>
           </div>
-        </section> -->
+        </section>
       </div>
       <!-- <img src="@/assets/images/cartrailer.png" alt="cartrailer"> -->
     </div>
-    <!-- <ContactsSection /> -->
+    <ContactsSection />
   </div>
 </template>
 
@@ -247,256 +247,264 @@ export default {
 }
 </script>
 
-<style lang="sass">
-@media only screen and (max-width : 980px)
-	.portfolio
-		background: green
-  // .more-cases
-  //   padding-bottom: 110px
-  //   .hightlight
-  //     margin-bottom: 100px
-  //   li
-  //     border-top: 1px solid #3C3C3C
-  //     padding-top: 10px
-  //     margin-bottom: 50px
-  //     a
-  //       display: block
-  //       background-image: url('../../assets/images/arrow-down.png')
-  //       background-repeat: no-repeat
-  //       background-position-x: 100%
-  //       background-position-y: 50%
-  //       font-size: 48px
-  //       &:hover
-  //        color:  #ffd63c
-  //   span
-  //     color: #ffd63c
+<style lang="sass" scoped>
+  .hightlight
+    font-size: 80px
+    font-weight: bold
+  .more-cases
+    padding-bottom: 110px
+    .hightlight
+      margin-bottom: 100px
+    li
+      border-top: 1px solid #3C3C3C
+      padding-top: 10px
+      margin-bottom: 50px
+      a
+        display: block
+        background-image: url('../../assets/images/arrow-down.png')
+        background-repeat: no-repeat
+        background-position-x: 100%
+        background-position-y: 50%
+        font-size: 48px
+        &:hover
+         color:  #ffd63c
+    span
+      color: #ffd63c
 
-  // .screenshots
-  //   margin: 180px
-  //   display: flex
-  //   justify-content: center
-  //   img
-  //     filter: grayscale(1)
-  //     width: 100vw
-  // .total 
-  //   margin-top: 120px
-  //   .items-wrapper
-  //     display: flex
-  //     justify-content: flex-end
-  //   .items 
-  //     display: flex
-  //     justify-content: space-between
-  //     max-width: 910px
-  //     flex-wrap: wrap
-  //   .statistics-item:nth-child(odd)
-  //     margin-top: 220px
-  //     margin-right: 120px
-  //   .statistics-item
-  //     .amount
-  //       color: #181818
-  //       font-weight: bold
-  //       font-size: 120px
-  //       text-shadow: -2px -2px 0 #FFD63C, 2px -2px 0 #FFD63C, -2px 2px 0 #FFD63C, 2px 2px 0 #FFD63C
-  //     .amount-underlight
-  //       box-sizing: border-box
-  //       padding-right: 120px
-  //       font-size: 24px
-  //       font-weight: bold
-  //       text-transform: uppercase
-  //       color: #FFD63C
-  //     .amount-description
-  //       line-height: 1.8
-  //       margin-top: 20px
-  //     max-width: 390px
+  .screenshots
+    margin: 180px
+    display: flex
+    justify-content: center
+    img
+      filter: grayscale(1)
+      width: 100vw
+  .total 
+    margin-top: 120px
+    .items-wrapper
+      display: flex
+      justify-content: flex-end
+    .items 
+      display: flex
+      justify-content: space-between
+      max-width: 910px
+      flex-wrap: wrap
+    .statistics-item:nth-child(odd)
+      margin-top: 220px
+      margin-right: 120px
+    .statistics-item
+      .amount
+        color: #181818
+        font-weight: bold
+        font-size: 120px
+        text-shadow: -2px -2px 0 #FFD63C, 2px -2px 0 #FFD63C, -2px 2px 0 #FFD63C, 2px 2px 0 #FFD63C
+      .amount-underlight
+        box-sizing: border-box
+        padding-right: 120px
+        font-size: 24px
+        font-weight: bold
+        text-transform: uppercase
+        color: #FFD63C
+      .amount-description
+        line-height: 1.8
+        margin-top: 20px
+      max-width: 390px
+
+  .feedback
+    padding-top: 187px
+    font-size: 80px
+    font-weight: bold
+    img
+      max-width: 100%
+  .feedback-video-wrapper
+    margin-top: 92px
+    display: flex
+    justify-content: center
+  .technologies
+    padding-top: 240px
+    .project-screen
+      margin-top: 80px
+      img 
+        max-width: 100%
+      .project-link
+        margin-top: 30px
+        display: flex
+        justify-content: center
+      .common_btn
+        background: transparent
+        font-size: 16px
+        padding: 20px 32px
+        font-family: 'NeutraTextTF-Demi'
+        margin-top: 32px
+        color: white
+        position: relative
+        overflow: hidden
+        font-size: 20px
+        &:after
+            content: ''
+            position: absolute
+            display: block
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            background: #1f1f1f
+            z-index: -1
+            transform: translateX(calc(62px - 100%))
+            transition: .3s linear all
+        &:hover 
+            &:after
+                transform: translateX(calc(0%))
+                transition: .3s linear all
+      a
+        color: #ffd63c
+    .technologies-list
+      display: flex
+      flex-wrap: wrap
+    .technology
+      width: 210px
+      height: 180px
+      background: #1E1E1E
+      margin: 12px
+      display: flex
+      justify-content: center
+      align-items: center
+      .img-wrapper
+        display: flex
+        justify-content: center
+      div
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        height: 100px
+        img
+          display: block
+        p
+          margin-top: 10px
       
-  // .hightlight
-  //   font-size: 80px
-  //   font-weight: bold
+    .title
+      font-size: 80px
+      margin-left: 12px
+      font-weight: bold
+      margin-bottom: 80px
 
-  // .feedback
-  //   padding-top: 187px
-  //   font-size: 80px
-  //   font-weight: bold
-  // .feedback-video-wrapper
-  //   margin-top: 92px
-  //   display: flex
-  //   justify-content: center
-  // .technologies
-  //   padding-top: 240px
-  //   .project-screen
-  //     margin-top: 80px
-  //     .project-link
-  //       margin-top: 30px
-  //       display: flex
-  //       justify-content: center
-  //     .common_btn
-  //       background: transparent
-  //       font-size: 16px
-  //       padding: 20px 32px
-  //       font-family: 'NeutraTextTF-Demi'
-  //       margin-top: 32px
-  //       color: white
-  //       position: relative
-  //       overflow: hidden
-  //       font-size: 20px
-  //       &:after
-  //           content: ''
-  //           position: absolute
-  //           display: block
-  //           width: 100%
-  //           height: 100%
-  //           left: 0
-  //           top: 0
-  //           background: #1f1f1f
-  //           z-index: -1
-  //           transform: translateX(calc(62px - 100%))
-  //           transition: .3s linear all
-  //       &:hover 
-  //           &:after
-  //               transform: translateX(calc(0%))
-  //               transition: .3s linear all
-  //     a
-  //       color: #ffd63c
-  //   .technologies-list
-  //     display: flex
-  //     flex-wrap: wrap
-  //   .technology
-  //     width: 210px
-  //     height: 180px
-  //     background: #1E1E1E
-  //     margin: 12px
-  //     display: flex
-  //     justify-content: center
-  //     align-items: center
-  //     .img-wrapper
-  //       display: flex
-  //       justify-content: center
-  //     div
-  //       display: flex
-  //       flex-direction: column
-  //       align-items: center
-  //       justify-content: space-between
-  //       height: 100px
-  //       img
-  //         display: block
-  //       p
-  //         margin-top: 10px
-      
-  //   .title
-  //     font-size: 80px
-  //     margin-left: 12px
-  //     font-weight: bold
-  //     margin-bottom: 80px
-
-  // .discovery-planning
-  //   .description-wrapper
-  //     display: flex
-  //     justify-content: center
-  //     padding: 150px 0 50px 0
-  //   .description
-  //     max-width: 925px
-  //     line-height: 1.8
-
-  // .discovery-planning-content
-  //   display: flex
-  //   align-items: center
-  //   justify-content: space-between
-
-  //   p
-  //     font-size: 80px
-  //     font-weight: bold
-  //     span
-  //       color: #181818
-  //       text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF
-
-  // .description-planning
-  //   padding-top: 150px
-  //   padding-bottom: 160px
-  //   display: flex
-  //   justify-content: space-evenly
-  //   .planning-list
-  //     line-height: 4
-  //     li 
-  //       list-style: none
-  //       color: #FFD63C
-  //       font-weight: bold
-  //       &::before
-  //         content: ''
-  //         display: inline-block
-  //         width: 10px
-  //         height: 10px
-  //         border: 2px solid #FFD63C
-  //         border-radius: 50%
-  //         position: relative
-  //         left: -25px
+  .discovery-planning
+    .description-wrapper
+      display: flex
+      justify-content: center
+      padding: 150px 0 50px 0
+    .description
+      max-width: 925px
+      line-height: 1.8
 
 
-  //   .story 
-  //     max-width: 570px
-  //     line-height: 180%
-  // .description-content
-  //   span
-  //     color: #ffd63c
-  //   display: flex
-  //   .description-text
-  //     display: flex
-  //     align-items: center
-  //     padding-left: 110px
-  //     padding-bottom: 20px
-  //   .text
-  //     font-size: 60px
-  //     line-height: 70px
-  //     font-weight: 900
-  //   .images
-  //     display: flex
-  //     .left
-  //       margin-top: 60px
-  //       margin-right: 30px
-  //     .right
-  //       div:first-child
-  //         margin-bottom: 30px
+  .discovery-planning-content
+    display: flex
+    align-items: center
+    justify-content: space-between
 
-  // .container-portfolio 
-  //   font-family: "Roboto", sans-serif
-  // .title-screen
-  //   height: 100vh
-  //   display: flex
-  //   justify-content: center
-  //   align-items: center
-  // .title-wrapper
-  //   display: flex
-  //   justify-content: center
-  //   align-items: center
-  //   position: relative
-  //   width: 100%
-  //   img 
-  //     width: 40%
-  //     max-width: 930px
-  // .background-title
-  //   position: absolute
-  //   font-weight: bold
-  //   font-size: calc(16vw) 
-  //   white-space: pre
-  //   z-index: -1
-  //   color: #181818
-  //   text-shadow: -1px -1px 0 #3B3B3B, 1px -1px 0 #3B3B3B, -1px 1px 0 #3B3B3B, 1px 1px 0 #3B3B3B
-  // .front-title
-  //   margin-top: 75px
-  //   position: absolute
-  //   font-size: calc(11vw) 
-  //   font-weight: bold
-  // .content
-  //   &::before
-  //     content: ""
-  //     background: linear-gradient(180deg, #1E1E1E 0%, rgba(30, 30, 30, 0) 100%), url('../../assets/images/background-portfolio.jpeg')
-  //     opacity: 0.07
-  //     filter: grayscale(1)
-  //     position: absolute
-  //     top: 0 
-  //     left: 0
-  //     width: 100% 
-  //     height: 100%
+    p
+      font-size: 80px
+      font-weight: bold
+      span
+        color: #181818
+        text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF
+    img 
+      max-width: 100%
+
+  .description-planning
+    padding-top: 150px
+    padding-bottom: 160px
+    display: flex
+    justify-content: space-evenly
+    .planning-list
+      line-height: 4
+      li 
+        list-style: none
+        color: #FFD63C
+        font-weight: bold
+        &::before
+          content: ''
+          display: inline-block
+          width: 10px
+          height: 10px
+          border: 2px solid #FFD63C
+          border-radius: 50%
+          position: relative
+          left: -25px
 
 
+    .story 
+      max-width: 570px
+      line-height: 180%
+  .description-content
+    span
+      color: #ffd63c
+    display: flex
+    .description-text
+      display: flex
+      align-items: center
+      padding-left: 110px
+      padding-bottom: 20px
+    .text
+      font-size: 60px
+      line-height: 70px
+      font-weight: 900
+    .images
+      display: flex
+      .left
+        margin-top: 60px
+        margin-right: 30px
+      .right
+        div:first-child
+          margin-bottom: 30px
+
+  .container-portfolio 
+    font-family: "Roboto", sans-serif
+  .title-screen
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+  .title-wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    width: 100%
+    img 
+      max-width: 37%
+
+
+  .background-title
+    position: absolute
+    font-weight: bold
+    font-size: 16vw
+    white-space: pre
+    z-index: -1
+    color: #181818
+    text-shadow: -1px -1px 0 #3B3B3B, 1px -1px 0 #3B3B3B, -1px 1px 0 #3B3B3B, 1px 1px 0 #3B3B3B
+  .front-title
+    margin-top: 75px
+    position: absolute
+    font-size: 12vw
+    font-weight: bold
+  .content
+    &::before
+      content: ""
+      background: linear-gradient(180deg, #1E1E1E 0%, rgba(30, 30, 30, 0) 100%), url('../../assets/images/background-portfolio.jpeg')
+      opacity: 0.07
+      filter: grayscale(1)
+      position: absolute
+      top: 0 
+      left: 0
+      width: 100% 
+      height: 100%
 </style>
 
+
+<style lang="sass">
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap&subset=cyrillic')
+  @import "./assets/style/main.sass"
+  @import "./assets/style/media.sass"
+</style>

@@ -111,6 +111,11 @@ export default {
 			)			
 		}
 	},
+	mounted() {
+		setTimeout(() => {
+			console.log(this.casesData)
+		}, 1500)
+	},
 	updated() {
 		let projectBlocks = document.getElementsByClassName('project-item')
 		TweenLite.to(projectBlocks, 1.5, {transform:"translateY(90px)"})

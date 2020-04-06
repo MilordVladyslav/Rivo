@@ -117,7 +117,8 @@ export default {
     return {
       pivot: {},
       loaded: false,
-      childrenMounted : []
+      childrenMounted : [],
+      updated: false
     }
   },
   computed: {
@@ -136,20 +137,21 @@ export default {
   },
   methods: {
     updateMountedComponents (componentName) {
-      this.childrenMounted.push(componentName)
-      if(this.childrenMounted.length === 10) {
-        setTimeout(() => {
-          if(this.$route.params.scrollTo && this.$route.params.scrollTo !== '#home') {
-              VueScrollTo.scrollTo(this.$route.params.scrollTo)
-            }    
-        }, 200)  
-      }
+      // this.childrenMounted.push(componentName)
+      // console.log(componentName)
+      // if(this.childrenMounted.length === 7) {
+      //   this.$nextTick(() => {
+      //     if(this.$route.params.scrollTo && this.$route.params.scrollTo !== '#home') {
+      //       console.log(this.$route.params.scrollTo)
+      //         VueScrollTo.scrollTo(this.$route.params.scrollTo)
+      //       } 
+      //   })
+      // }
     },
 		receive3Dmodels () {
 				
 			let pivot  = new THREE.Group();
       let objLoader = new THREE.OBJLoader();
-      // objLoader.setLogging({enabled : false, debug : false})
       objLoader.setPath('./3Dmodels/');
 			function addPivot (pivot, resolve) {
 				resolve(pivot)
@@ -211,6 +213,19 @@ export default {
        }
      })
   },
+  updated() {
+    this.$nextTick(() => {
+      this.updated += 1
+    })
+    this.$nextTick(() => {
+      if(this.$route.params.scrollTo && this.$route.params.scrollTo !== '#home' && this.updated === 4) {
+        console.log(this.$route.params.scrollTo)
+        setTimeout(() => {
+          VueScrollTo.scrollTo(this.$route.params.scrollTo)
+        }, 200)
+        } 
+    })
+  }
 } 
 </script>
 
