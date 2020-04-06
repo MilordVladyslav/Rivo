@@ -207,12 +207,12 @@
               </div>
             </div>
         </section>
-        <!-- <section class="screenshots">
+        <section class="screenshots">
           <div>
             <img src="@/assets/images/maskgroup.png"/>
           </div>
-        </section> -->
-        <!-- <section class="more-cases">
+        </section>
+        <section class="more-cases">
           <div class="container">
             <p class="hightlight">More <span>Cases</span></p>
             <div>
@@ -228,11 +228,11 @@
               </ul>
             </div>
           </div>
-        </section> -->
+        </section>
       </div>
       <!-- <img src="@/assets/images/cartrailer.png" alt="cartrailer"> -->
     </div>
-    <!-- <ContactsSection /> -->
+    <ContactsSection />
   </div>
 </template>
 

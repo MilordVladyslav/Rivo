@@ -467,8 +467,26 @@
 
 @media screen and ( max-width: 930px ) 
 	.total
-		.statistics-item
-			margin: 0
+		.items-wrapper
+			.items
+				.statistics-item
+					margin: 0
+					max-width: 47%
+
+@media screen and ( max-width: 660px ) 
+	.total
+		.hightlight
+			font-size: 42px
+		.items-wrapper
+			.items
+				.amount
+					font-size: 35px
+					text-shadow: -1px -1px 0 #FFD63C, 1px -1px 0 #FFD63C, -1px 1px 0 #FFD63C, 1px 1px 0 #FFD63C
+				.amount-underlight
+					font-size: 18px
+				.statistics-item
+					max-width: 100%
+					margin: 20px 0
 
 @media only screen and (max-width : 700px)
 	h1
@@ -593,7 +611,19 @@
 		padding-top: 80px
 		p
 			font-size: 42px
+	.container-portfolio
+		.screenshots
+			margin: 80px
 
+	.more-cases
+		.container
+			.hightlight
+				font-size: 42px
+				margin-bottom: 20px
+			li
+				margin-bottom: 30px
+				a 
+					font-size: 22px
 
 @media only screen and (max-width : 480px)
 	.first-content
@@ -844,12 +874,16 @@
 		.container-portfolio
 			.technologies
 				padding-top: 50px
-				
-	.feedback
-		padding-top: 80px
-		p
+
+	.content	
+		.feedback
+			padding-top: 80px
+			p
+				text-align: center
+				font-size: 42px
+	.statistics
+		.hightlight
 			text-align: center
-			font-size: 42px
 
 
 @media only screen and (max-height: 750px)
