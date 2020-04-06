@@ -1,0 +1,144 @@
+.contacts-content
+    font-family: "NeutraTextTF-Book"
+    font-size: 20px
+    .contacts_circle
+        bottom: 87px
+        right: -115px
+        z-index: -1
+    .circle-figure 
+        width: 92px
+        height: 92px
+    .view_triangle-contacts-right
+        right: -278px
+        top: 0
+    .view_triangle-contacts-left
+        left: -128px
+        width: 72px
+        height: 62px
+        transform: scale(.7, .7)
+        top: 145px
+    .view_snake-contacts
+        bottom: 74px
+    .view_snake-contacts-middle
+        left: 31%
+        top: 221px
+    .plus_bit
+        width: 48px
+        height: 46px
+        span 
+            height: 8px
+    .view_plus-contacts
+        right: -136px
+        bottom: 128px
+        display: none
+    .container
+        display: flex
+        justify-content: space-between
+    .contacts-block
+        padding: 83px 0 93px 0
+    .contacts
+        margin-top: 68px
+        +text(NeutraTextTF-Book, 82, 1.17, normal)
+    .logo
+        width: 168px
+        height: 68px
+        background: none
+        margin-top: 52px
+    .location
+        margin-top: 52px
+        margin-bottom: 32px
+    .reference-zone
+        width: 50%
+    .contacts-form
+        width: 470px
+    .phone-list
+        li
+            a 
+                line-height: 1.3
+    .contacts-form
+        overflow: hidden
+        padding-top: 73px
+        .golden_line
+            width: 100%
+            height: 1px
+            background: #ffd63c
+            position: absolute
+            display: block
+            left: 0
+            bottom: 0
+            transform: translateX(-100%)
+            transition: .3s linear           
+        .head-field
+            +text(NeutraTextTF-Book, 18, 1, normal)
+            height: 42px
+            width: 100%
+            border: none
+            background: none
+            border-bottom: 1px solid #515151
+            color: rgba(255, 255, 255, .5)
+            &:focus + label
+                transform: translate(-100%, -50%)
+                transition: .3s linear
+                + .golden_line
+                    transform: translateX(0%)
+                    transition: .3s linear
+            &.hasError + label
+                + .golden_line
+                    transform: translateX(0%)
+                    transition: .3s linear
+                    background: red                   
+        .field
+            position: relative
+            margin-bottom: 24px
+            display: block
+            label
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translate(0, -50%)
+                transition: .3s linear
+                +text(NeutraTextTF-Book, 18, 1, normal)
+                color: rgba(255, 255, 255, 1)
+        .common_btn
+            background: transparent
+            font-size: 16px
+            padding: 20px 32px
+            font-family: 'NeutraTextTF-Demi'
+            margin-top: 32px
+            color: white
+            position: relative
+            overflow: hidden
+            &:after
+                content: ''
+                position: absolute
+                display: block
+                width: 100%
+                height: 100%
+                left: 0
+                top: 0
+                background: #1f1f1f
+                z-index: -1
+                transform: translateX(calc(62px - 100%));
+                transition: .3s linear all
+            &:hover
+                &:after
+                    transform: translateX(calc(0%))
+                    transition: .3s linear all
+        .attach-file
+            margin-top: 36px
+        .file
+            opacity: 0
+            position: relative
+            z-index: 2
+        .label-wrapper
+            position: relative
+            top: -25px
+            img 
+                position: relative
+                top: 3px
+
+.fill_form
+    position: absolute
+    transform: translateY(-100%)
+
+

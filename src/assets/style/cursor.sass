@@ -1,0 +1,61 @@
+body
+  cursor: url("https://s.electerious.com/images/codepen/cursor.svg") 3 3, auto
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.cursor
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  width: var(--width)
+  height: var(--height)
+  -webkit-transform: translate(calc(var(--x) - var(--width) / 2), calc(var(--y) - var(--height) / 2))
+  transform: translate(calc(var(--x) - var(--width) / 2), calc(var(--y) - var(--height) / 2))
+  transition-duration: .1s
+  transition-timing-function: cubic-bezier(0.25, 0.25, 0.42, 1)
+  transition-property: width, height, -webkit-transform
+  transition-property: width, height, transform
+  transition-property: width, height, transform, -webkit-transform
+  z-index: 100
+  pointer-events: none
+  will-change: transform
+
+a:hover, button:hover, ul li:hover
+  cursor: url("https://s.electerious.com/images/codepen/cursor.svg") 3 3, auto
+
+@media (pointer: fine)
+  .cursor
+    display: block
+    z-index: 1000
+
+.cursor::after
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  border-radius: var(--radius)
+  border: 2px solid #333
+  opacity: var(--scale)
+  -webkit-transform: scale(var(--scale))
+  transform: scale(var(--scale))
+  transition: 0.3s cubic-bezier(0.25, 0.25, 0.42, 1) opacity, 0.1s cubic-bezier(0.25, 0.25, 0.42, 1) border-radius, 0.3s cubic-bezier(0.25, 0.25, 0.42, 1) -webkit-transform
+  transition: 0.3s cubic-bezier(0.25, 0.25, 0.42, 1) opacity, 0.3s cubic-bezier(0.25, 0.25, 0.42, 1) transform, 0.1s cubic-bezier(0.25, 0.25, 0.42, 1) border-radius
+  transition: 0.3s cubic-bezier(0.25, 0.25, 0.42, 1) opacity, 0.3s cubic-bezier(0.25, 0.25, 0.42, 1) transform, 0.1s cubic-bezier(0.25, 0.25, 0.42, 1) border-radius, 0.3s cubic-bezier(0.25, 0.25, 0.42, 1) -webkit-transform
+
+body:not(body:hover) .cursor::after
+  opacity: 0
+  -webkit-transform: scale(0)
+  transform: scale(0)
+
+.link
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 1em
+  width: var(--size)
+  height: var(--size)
+  background: rgba(255, 255, 255, 0.1)
+  border-radius: 100%

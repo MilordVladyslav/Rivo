@@ -1,8 +1,4 @@
-<style lang="sass">
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap&subset=cyrillic')
-  @import "./assets/style/main.sass"
-  @import "./assets/style/media.sass"
-</style>
+
 <template>
   <div>
     <Header></Header>
@@ -60,7 +56,7 @@
             </div>
           </div>
         </section>
-        <!-- <section class="discovery-planning">
+        <section class="discovery-planning">
           <div class="container">
             <div class="discovery-planning-content">
               <div class="text">
@@ -81,8 +77,8 @@
               </p>
             </div>
           </div>
-        </section> -->
-        <!-- <section class="technologies">
+        </section>
+        <section class="technologies">
           <div class="container">
             <p class="title">Technologies</p>
             <div class="technologies-list">
@@ -148,16 +144,16 @@
               </div>
             </div>
           </div>
-        </section> -->
-        <!-- <section class="feedback">
+        </section>
+        <section class="feedback">
           <div class="container">
             <p>Feedback</p>
             <div class="feedback-video-wrapper">
               <img src="@/assets/images/video.png" alt="video">
             </div>
           </div>
-        </section> -->
-        <!-- <section class="total">
+        </section>
+        <section class="total">
             <div class="container">
               <div class="statistics">
               <p class="hightlight">Total</p>
@@ -210,12 +206,12 @@
                   </div>
               </div>
             </div>
-        </section> -->
+        </section>
         <!-- <section class="screenshots">
           <div>
             <img src="@/assets/images/maskgroup.png"/>
           </div>
-        </section>  -->
+        </section> -->
         <!-- <section class="more-cases">
           <div class="container">
             <p class="hightlight">More <span>Cases</span></p>
@@ -236,7 +232,7 @@
       </div>
       <!-- <img src="@/assets/images/cartrailer.png" alt="cartrailer"> -->
     </div>
-    <ContactsSection />
+    <!-- <ContactsSection /> -->
   </div>
 </template>
 
@@ -252,6 +248,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+  .hightlight
+    font-size: 80px
+    font-weight: bold
   .more-cases
     padding-bottom: 110px
     .hightlight
@@ -309,15 +308,13 @@ export default {
         line-height: 1.8
         margin-top: 20px
       max-width: 390px
-      
-  .hightlight
-    font-size: 80px
-    font-weight: bold
 
   .feedback
     padding-top: 187px
     font-size: 80px
     font-weight: bold
+    img
+      max-width: 100%
   .feedback-video-wrapper
     margin-top: 92px
     display: flex
@@ -326,6 +323,8 @@ export default {
     padding-top: 240px
     .project-screen
       margin-top: 80px
+      img 
+        max-width: 100%
       .project-link
         margin-top: 30px
         display: flex
@@ -398,6 +397,7 @@ export default {
       max-width: 925px
       line-height: 1.8
 
+
   .discovery-planning-content
     display: flex
     align-items: center
@@ -409,6 +409,8 @@ export default {
       span
         color: #181818
         text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF
+    img 
+      max-width: 100%
 
   .description-planning
     padding-top: 150px
@@ -500,3 +502,9 @@ export default {
       height: 100%
 </style>
 
+
+<style lang="sass">
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap&subset=cyrillic')
+  @import "./assets/style/main.sass"
+  @import "./assets/style/media.sass"
+</style>

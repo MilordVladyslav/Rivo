@@ -86,19 +86,27 @@
 	.blogtext-block
 		padding: 100px 15px
 
-	.description
-		.description-content
-			flex-direction: column
-			.text
-				font-size: 32px
-			.images
-				justify-content: center
-				.left
-					margin: 0
-				.right
-					display: flex
-		.description-planning
-			padding-top: 0
+	.content
+		.description
+			.description-content
+				flex-direction: column
+				.description-text
+					padding-left: 0
+					justify-content: center
+				.text
+					font-size: 32px
+					text-align: center
+				.images
+					justify-content: center
+					.left
+						margin: 0
+					.right
+						display: flex
+	
+	.technologies
+		.technologies-list
+			justify-content: center
+
 
 @media only screen and (max-width : 1090px)
 	.content_blogpost
@@ -121,7 +129,8 @@
 
 	.description
 		margin-top: 30px
-
+	.discovery-planning-content
+		flex-direction: column
 
 
 @media only screen and (max-width : 992px)
@@ -257,6 +266,13 @@
 			.description-text 
 				justify-content: center
 				padding-left: 0
+	.content
+		.technologies
+			.container
+				.title
+					font-size: 42px
+					text-align: center
+					margin-left: 0
 
 
 
@@ -423,7 +439,7 @@
 		.description
 			.description-content
 				.text 
-					font-size: 22px
+					font-size: 32px
 					line-height: 1.5
 				.images
 					margin-bottom: 20px
@@ -439,7 +455,7 @@
 			
 			.description-planning
 				padding-top: 0
-				padding-bottom: 20px
+
 
 			.planning-list
 				margin-bottom: 20px
@@ -449,6 +465,10 @@
 						line-height: 2
 						text-align: center
 
+@media screen and ( max-width: 930px ) 
+	.total
+		.statistics-item
+			margin: 0
 
 @media only screen and (max-width : 700px)
 	h1
@@ -563,6 +583,16 @@
 	.front-title
 		margin-top: 0
 		font-size: 62px
+	.discovery-planning
+		.discovery-planning-content
+			.text
+				p
+					font-size: 46px
+	
+	.feedback
+		padding-top: 80px
+		p
+			font-size: 42px
 
 
 @media only screen and (max-width : 480px)
@@ -795,6 +825,32 @@
 	.blog_list li a h5
 		margin-bottom: 20px
 	
+	.container-portfolio
+		.description
+			.description-content
+				.text 
+					font-size: 22px
+					line-height: 1.5
+		.description-planning
+			padding-top: 0
+			padding-bottom: 50px
+		
+		.discovery-planning
+			.container
+				.description-wrapper
+					padding-top: 50px
+	
+	.content
+		.container-portfolio
+			.technologies
+				padding-top: 50px
+				
+	.feedback
+		padding-top: 80px
+		p
+			text-align: center
+			font-size: 42px
+
 
 @media only screen and (max-height: 750px)
 	.view_snake, .view_skew

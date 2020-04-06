@@ -1,0 +1,281 @@
+@import "mixins"
+
+
+.case-start-section
+	position: relative
+	.container
+		height: 100%
+	.back_image
+		position: absolute
+		top: 0
+		left: 0
+		font-size: 0
+		height: 100%
+		width: 100%
+		display: block
+		img
+			object-fit: cover
+			height: 100%
+			width: 100%
+
+.bottom_zone
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	height: 100%
+	padding-bottom: 65px
+	h2
+		margin-bottom: 32px
+
+.topic_case
+	margin-bottom: 32px
+	font-family: "NeutraTextTF-Demi", sans-serif
+
+.shape_circle
+	border-radius: 50%
+	width: 46px
+	height: 46px
+	display: flex
+	align-items: center
+	justify-content: center
+	border: 1px solid #ffffff
+	margin-right: 18px
+
+.look_case
+	display: flex
+	align-items: center
+	font-family: "NeutraTextTF-Demi", sans-serif
+
+/*================================================= DESC BLOCK*/
+.desc-block
+	padding: 250px 0 125px 0
+	position: relative
+
+.brand_box
+	margin-bottom: 204px
+
+.first_brand_box
+	display: flex
+	justify-content: space-between
+	margin-bottom: 32px
+	.text_bit
+		max-width: 770px
+
+.text_bit
+	p
+		+text(NeutraTextTF-Demi, 20, normal, normal)
+		line-height: 1.6
+
+.brand_list
+	li
+		margin-bottom: 16px
+		+text(NeutraTextTF-Demi, 20, normal, normal)
+		line-height: 1.6
+		color: #989aa0
+		&:last-child
+			margin-bottom: 0
+
+.second_brand_box
+	.zone_br
+		margin-bottom: 21px
+		&:last-of-type
+			margin-bottom: 0
+
+.zone_br
+	display: flex
+	justify-content: space-between
+	ul
+		max-width: 770px
+	.name_brand
+		+text(NeutraTextTF-Demi, 20, normal, normal)
+		line-height: 1.6
+		color: #989aa0
+
+.tech_list
+	display: flex
+	width: 770px
+	li
+		margin-right: 16px
+		line-height: 1.6
+		&:last-of-type
+			margin-right: 0
+		a
+			display: flex
+			align-items: center
+	.icon-combined-shape
+		font-size: 10px
+		position: relative
+		display: block
+		width: 10px
+		overflow: hidden
+		margin-left: 13px
+		&:before
+			display: block
+			transform: rotate(-45deg) translate(-4px, 1px)
+
+.skill_st
+	+text(NeutraTextTF-Demi, 20, normal, normal)
+	color: #ffd63c
+
+.case_desc_circle
+	top: 104px
+	left: 550px
+	width: 70px
+	height: 70px
+
+.case_desc_square
+	top: 58px
+	right: -239px
+
+.case_desc_triangle
+	top: 42%
+	z-index: -1
+
+.case_desc_circle_plus
+	right: 0
+	top: 30%
+	z-index: -1
+	transform: translateX(100%)
+
+.case_second_plus
+	top: 9px
+	margin-left: 79px
+
+.case_first_plus
+	top: 215px
+	transform: translateX(-100%)
+
+.case_skew
+	z-index: -1
+	bottom: -100px
+	left: 0
+	transform: translateX(-400px) skew(-28deg, 0deg)
+
+.case_first_snake
+	bottom: 200px
+	right: 0
+	z-index: -1
+	right: -160px
+
+.case_rectangle
+	top: 61%
+	right: -20%
+
+
+/*================================================= DISCOVERY BLOCK*/
+.discovery-block
+	padding: 125px 0
+.disc_zone
+	display: flex
+	justify-content: space-between
+	.text_bit
+		max-width: 670px
+
+.slider_zone
+	.hooper-track
+		margin-bottom: 72px
+
+.image-slider-block, .client-movie-block
+	padding: 125px 0
+
+.case_discovery_circle
+	bottom: -80px
+	right: -325px
+	transform: translateX(100%)
+
+.case_movie_circle_plus
+	left: 0
+	transform: translateX(calc(-100% - 110px))
+	top: 220px
+	z-index: -1
+
+.case_movie_square
+	bottom: -20px
+	left: 260px
+
+/*================================================= CASE BLOCK*/
+.case-block
+	padding: 125px 0 160px 0
+	position: relative
+
+	h2
+		margin-bottom: 72px
+
+.project_list.case_page
+	.project-item
+		background: transparent
+		padding: 0 30px 0 0
+		transform: translateY(0px)
+		height: 100%
+		&:nth-of-type(even)
+			margin-top: 0
+		.item_help
+			background: #1f1f1f
+			padding: 10px
+
+.image-slider-block, .case-block
+	max-width: calc(1170px + 375px)
+.image-slider-block	.hooper-list, .case-block .hooper-list
+	transform: translateX(187px) !important
+
+.image-slider-block	.hooper-navigation, .case-block	.hooper-navigation
+	padding-right: 375px
+
+.case_third_plus
+	right: 0
+	top: 220px
+	transform: translateX(calc(100% + 112px)) 
+
+.case_single_circle
+	top: 45%
+	left: -290px
+	transform: translateX(-90%)
+
+.case-block
+	.hooper-track
+		.is-current
+			+ li
+				animation-name: scaleEffect
+				animation-duration: 1.5s
+
+.image-slider-block
+	.hooper-track
+		.is-current .img_size
+			animation-name: scaleEffect
+			animation-duration: 1s
+
+.image-slider-block
+	.hooper-track
+		.is-prev .img_size
+			animation-name: scaleEffect
+			animation-duration: 1s
+
+.image-slider-block
+	.hooper-track
+		.is-prev
+			+ li 
+				animation-name: scaleEffect
+				animation-duration: 1s
+
+@keyframes scaleEffect
+	0%
+		transform: scale(0.8)
+	100%
+		transform: scale(1)
+
+
+
+/*================================================= 3D MODELS*/
+
+.second-screen-canvas-wrapper
+	top: 100vh
+
+.discovery-content-section-container.canvas-container
+	position: relative
+
+.client-movie-section-container.canvas-container
+	position: relative
+
+.case-content-section-container
+	position: relative
+	max-width: 2370px
