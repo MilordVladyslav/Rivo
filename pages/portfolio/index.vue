@@ -1,7 +1,8 @@
-
 <template>
-  <div>
-    <Header></Header>
+  <div class="portfolio">
+    <!-- <client-only placeholder="Loading..."> -->
+      <Header></Header>
+    <!-- </client-only> -->
     <div class="content">
       <div class="container-portfolio">
         <section class="title-screen">
@@ -19,14 +20,14 @@
               </div>
               <div class="images">
                 <div class="left">
-                  <img src="../../assets/images/car1.png" alt="car1">
+                  <img src="@/assets/images/car1.png" alt="car1">
                 </div>
                 <div class="right">
                   <div>
-                    <img src="../../assets/images/car2.png" alt="car2">
+                    <img src="@/assets/images/car2.png" alt="car2">
                   </div>
                   <div>
-                    <img src="../../assets/images/car3.png" alt="car3">
+                    <img src="@/assets/images/car3.png" alt="car3">
                   </div>
                 </div>
               </div>
@@ -57,26 +58,31 @@
           </div>
         </section>
         <section class="discovery-planning">
-          <div class="container">
-            <div class="discovery-planning-content">
-              <div class="text">
-                <p>Discovery <br/>  <span> & planning </span> </p>
+            <div class="container">
+              <div class="discovery-planning-content">
+                <div class="text">
+                  <p class="highlight">Discovery <br/>  <span> & planning </span> </p>
+                </div>
+                <div>
+                  <img src="@/assets/images/map.png" alt="map">
+                </div>
               </div>
-              <div>
-                <img src="@/assets/images/map.png" alt="map">
+              
+              <div class="discovery-wrapper">
+                <p class="discovery-description">
+                  A meal just isn’t complete without dessert. 
+                  But instead of reaching for store-bought sweets or those unimaginative brownies from a box, 
+                  get more mileage out of your grill by grilling your next dessert. “Years ago, even the most 
+                  inventive cooks treated the idea of making desserts on a grill with skepticism, but now you can’t 
+                  claim to be a master griller unless you have at least a couple desserts in your repertoire
+                </p>
               </div>
+
+              <div class="site-map-picture">
+                <img src="@/assets/images/siteMapPicture.svg" alt="">
+              </div>
+
             </div>
-            
-            <div class="description-wrapper">
-              <p class="description">
-                A meal just isn’t complete without dessert. 
-                But instead of reaching for store-bought sweets or those unimaginative brownies from a box, 
-                get more mileage out of your grill by grilling your next dessert. “Years ago, even the most 
-                inventive cooks treated the idea of making desserts on a grill with skepticism, but now you can’t 
-                claim to be a master griller unless you have at least a couple desserts in your repertoire
-              </p>
-            </div>
-          </div>
         </section>
         <section class="technologies">
           <div class="container">
@@ -156,7 +162,7 @@
         <section class="total">
             <div class="container">
               <div class="statistics">
-              <p class="hightlight">Total</p>
+              <p class="highlight">Total</p>
                 <div class="items-wrapper">
                     <div class="items">
                       <div class="statistics-item">
@@ -214,17 +220,17 @@
         </section>
         <section class="more-cases">
           <div class="container">
-            <p class="hightlight">More <span>Cases</span></p>
+            <p class="highlight">More <span>Cases</span></p>
             <div>
               <ul>
-                <li> <a href="#"> Meltdown Game </a> </li>
-                <li> <a href="#"> Royal House </a> </li>
-                <li> <a href="#"> Monaco Lux  Garage </a> </li>
-                <li> <a href="#"> Omegaaa </a> </li>
-                <li> <a href="#"> Saltmine </a> </li>
-                <li> <a href="#"> Premier logistics </a> </li>
-                <li> <a href="#"> Spc Uticany </a> </li>
-                <li> <a href="#"> Farmstead </a> </li>
+                <li> <a href="#" class="more-cases-link"> Meltdown Game </a> </li>
+                <li> <a href="#" class="more-cases-link"> Royal House </a> </li>
+                <li> <a href="#" class="more-cases-link"> Monaco Lux  Garage </a> </li>
+                <li> <a href="#" class="more-cases-link"> Omegaaa </a> </li>
+                <li> <a href="#" class="more-cases-link"> Saltmine </a> </li>
+                <li> <a href="#" class="more-cases-link"> Premier logistics </a> </li>
+                <li> <a href="#" class="more-cases-link"> Spc Uticany </a> </li>
+                <li> <a href="#" class="more-cases-link"> Farmstead </a> </li>
               </ul>
             </div>
           </div>
@@ -247,264 +253,334 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-  .hightlight
-    font-size: 80px
-    font-weight: bold
-  .more-cases
-    padding-bottom: 110px
-    .hightlight
-      margin-bottom: 100px
-    li
-      border-top: 1px solid #3C3C3C
-      padding-top: 10px
-      margin-bottom: 50px
-      a
-        display: block
-        background-image: url('../../assets/images/arrow-down.png')
-        background-repeat: no-repeat
-        background-position-x: 100%
-        background-position-y: 50%
-        font-size: 48px
-        &:hover
-         color:  #ffd63c
-    span
-      color: #ffd63c
-
-  .screenshots
-    margin: 180px
-    display: flex
-    justify-content: center
-    img
-      filter: grayscale(1)
-      width: 100vw
-  .total 
-    margin-top: 120px
-    .items-wrapper
-      display: flex
-      justify-content: flex-end
-    .items 
-      display: flex
-      justify-content: space-between
-      max-width: 910px
-      flex-wrap: wrap
-    .statistics-item:nth-child(odd)
-      margin-top: 220px
-      margin-right: 120px
-    .statistics-item
-      .amount
-        color: #181818
-        font-weight: bold
-        font-size: 120px
-        text-shadow: -2px -2px 0 #FFD63C, 2px -2px 0 #FFD63C, -2px 2px 0 #FFD63C, 2px 2px 0 #FFD63C
-      .amount-underlight
-        box-sizing: border-box
-        padding-right: 120px
-        font-size: 24px
-        font-weight: bold
-        text-transform: uppercase
-        color: #FFD63C
-      .amount-description
-        line-height: 1.8
-        margin-top: 20px
-      max-width: 390px
-
-  .feedback
-    padding-top: 187px
-    font-size: 80px
-    font-weight: bold
-    img
-      max-width: 100%
-  .feedback-video-wrapper
-    margin-top: 92px
-    display: flex
-    justify-content: center
-  .technologies
-    padding-top: 240px
-    .project-screen
-      margin-top: 80px
-      img 
-        max-width: 100%
-      .project-link
-        margin-top: 30px
-        display: flex
-        justify-content: center
-      .common_btn
-        background: transparent
-        font-size: 16px
-        padding: 20px 32px
-        font-family: 'NeutraTextTF-Demi'
-        margin-top: 32px
-        color: white
-        position: relative
-        overflow: hidden
-        font-size: 20px
-        &:after
-            content: ''
-            position: absolute
-            display: block
-            width: 100%
-            height: 100%
-            left: 0
-            top: 0
-            background: #1f1f1f
-            z-index: -1
-            transform: translateX(calc(62px - 100%))
-            transition: .3s linear all
-        &:hover 
-            &:after
-                transform: translateX(calc(0%))
-                transition: .3s linear all
-      a
-        color: #ffd63c
-    .technologies-list
-      display: flex
-      flex-wrap: wrap
-    .technology
-      width: 210px
-      height: 180px
-      background: #1E1E1E
-      margin: 12px
-      display: flex
-      justify-content: center
-      align-items: center
-      .img-wrapper
-        display: flex
-        justify-content: center
-      div
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: space-between
-        height: 100px
-        img
-          display: block
-        p
-          margin-top: 10px
-      
-    .title
-      font-size: 80px
-      margin-left: 12px
-      font-weight: bold
-      margin-bottom: 80px
-
-  .discovery-planning
-    .description-wrapper
-      display: flex
-      justify-content: center
-      padding: 150px 0 50px 0
-    .description
-      max-width: 925px
-      line-height: 1.8
-
-
-  .discovery-planning-content
-    display: flex
-    align-items: center
-    justify-content: space-between
-
-    p
-      font-size: 80px
-      font-weight: bold
-      span
-        color: #181818
-        text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF
-    img 
-      max-width: 100%
-
-  .description-planning
-    padding-top: 150px
-    padding-bottom: 160px
-    display: flex
-    justify-content: space-evenly
-    .planning-list
-      line-height: 4
-      li 
-        list-style: none
-        color: #FFD63C
-        font-weight: bold
-        &::before
-          content: ''
-          display: inline-block
-          width: 10px
-          height: 10px
-          border: 2px solid #FFD63C
-          border-radius: 50%
-          position: relative
-          left: -25px
-
-
-    .story 
-      max-width: 570px
-      line-height: 180%
-  .description-content
-    span
-      color: #ffd63c
-    display: flex
-    .description-text
-      display: flex
-      align-items: center
-      padding-left: 110px
-      padding-bottom: 20px
-    .text
-      font-size: 60px
-      line-height: 70px
-      font-weight: 900
-    .images
-      display: flex
-      .left
-        margin-top: 60px
-        margin-right: 30px
-      .right
-        div:first-child
-          margin-bottom: 30px
-
-  .container-portfolio 
-    font-family: "Roboto", sans-serif
-  .title-screen
-    height: 100vh
-    display: flex
-    justify-content: center
-    align-items: center
-  .title-wrapper
-    display: flex
-    justify-content: center
-    align-items: center
-    position: relative
-    width: 100%
-    img 
-      max-width: 37%
-
-
-  .background-title
-    position: absolute
-    font-weight: bold
-    font-size: 16vw
-    white-space: pre
-    z-index: -1
-    color: #181818
-    text-shadow: -1px -1px 0 #3B3B3B, 1px -1px 0 #3B3B3B, -1px 1px 0 #3B3B3B, 1px 1px 0 #3B3B3B
-  .front-title
-    margin-top: 75px
-    position: absolute
-    font-size: 12vw
-    font-weight: bold
-  .content
-    &::before
-      content: ""
-      background: linear-gradient(180deg, #1E1E1E 0%, rgba(30, 30, 30, 0) 100%), url('../../assets/images/background-portfolio.jpeg')
-      opacity: 0.07
-      filter: grayscale(1)
-      position: absolute
-      top: 0 
-      left: 0
-      width: 100% 
-      height: 100%
-</style>
-
 
 <style lang="sass">
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap&subset=cyrillic')
-  @import "./assets/style/main.sass"
-  @import "./assets/style/media.sass"
+.more-cases-link
+  background-image: url('../../assets/images/arrow-down.png')
+
+.title-screen
+  &::before
+    content: ""
+    background: url('../../assets/images/ash-1.png')
+    // background-size: cover
+    opacity: 1
+    filter: grayscale(1)
+    position: absolute
+    z-index: -1
+    top: 0 
+    left: 0
+    width: 100% 
+    height: 2260px
+
+.technologies
+  // border: 1px solid red
+  background-color: #1c1c1c
+  position: relative
+  &::before
+    display: block
+    content: ""
+    position: absolute
+    background: url('../../assets/images/ash-2.png')
+    background-size: cover
+    filter: grayscale(1)
+    top: 0
+    left: 0
+    width: 100%
+    height: 1500px
+
+.feedback
+  position: relative
+  &::before
+    display: block
+    content: ""
+    position: absolute
+    background: url('../../assets/images/ash-3.png')
+    background-size: cover
+    filter: grayscale(1)
+    top: 0
+    left: 0
+    width: 100%
+    height: 1900px
+
+.more-cases
+  position: relative
+  &::before
+    display: block
+    content: ""
+    position: absolute
+    background: url('../../assets/images/ash-4.png')
+    background-size: cover
+    filter: grayscale(1)
+    z-index: -1
+    top: 0
+    left: 0
+    width: 100%
+    height: 1500px
+
+.portfolio
+  .contacts-content
+    padding-top: 120px
+    background-color: #121212
+    .contacts-block
+      .common_btn
+        color: gold  
+      .snake-figure, .circle-figure, .triangle-figure 
+        display: none
+
+// .discovery-planning
+//   background-color: #1e1e1e  
+
+  // .highlight
+  //   font-size: 80px
+  //   font-weight: bold
+  // .more-cases
+  //   padding-bottom: 110px
+  //   .highlight
+  //     margin-bottom: 100px
+  //   li
+  //     border-top: 1px solid #3C3C3C
+  //     padding-top: 10px
+  //     margin-bottom: 50px
+  //     a
+  //       display: block
+  //       background-image: url('../../assets/images/arrow-down.png')
+  //       background-repeat: no-repeat
+  //       background-position-x: 100%
+  //       background-position-y: 50%
+  //       font-size: 48px
+  //       &:hover
+  //        color:  #ffd63c
+  //   span
+  //     color: #ffd63c
+
+  // .screenshots
+  //   margin: 180px
+  //   display: flex
+  //   justify-content: center
+  //   img
+  //     filter: grayscale(1)
+  //     width: 100vw
+  // .total 
+  //   margin-top: 120px
+  //   .items-wrapper
+  //     display: flex
+  //     justify-content: flex-end
+  //   .items 
+  //     display: flex
+  //     justify-content: space-between
+  //     max-width: 910px
+  //     flex-wrap: wrap
+  //   .statistics-item:nth-child(odd)
+  //     margin-top: 220px
+  //     margin-right: 120px
+  //   .statistics-item
+  //     .amount
+  //       color: #181818
+  //       font-weight: bold
+  //       font-size: 120px
+  //       text-shadow: -2px -2px 0 #FFD63C, 2px -2px 0 #FFD63C, -2px 2px 0 #FFD63C, 2px 2px 0 #FFD63C
+  //     .amount-underlight
+  //       box-sizing: border-box
+  //       padding-right: 120px
+  //       font-size: 24px
+  //       font-weight: bold
+  //       text-transform: uppercase
+  //       color: #FFD63C
+  //     .amount-description
+  //       line-height: 1.8
+  //       margin-top: 20px
+  //     max-width: 390px
+
+  // .feedback
+  //   padding-top: 187px
+  //   font-size: 80px
+  //   font-weight: bold
+  //   img
+  //     max-width: 100%
+  // .feedback-video-wrapper
+  //   margin-top: 92px
+  //   display: flex
+  //   justify-content: center
+  // .technologies
+  //   padding-top: 240px
+  //   .project-screen
+  //     margin-top: 80px
+  //     img 
+  //       max-width: 100%
+  //     .project-link
+  //       margin-top: 30px
+  //       display: flex
+  //       justify-content: center
+  //     .common_btn
+  //       background: transparent
+  //       font-size: 16px
+  //       padding: 20px 32px
+  //       font-family: 'NeutraTextTF-Demi'
+  //       margin-top: 32px
+  //       color: white
+  //       position: relative
+  //       overflow: hidden
+  //       font-size: 20px
+  //       a
+  //         position: relative
+  //         z-index: 2
+  //       &:after
+  //           content: ''
+  //           position: absolute
+  //           display: block
+  //           width: 100%
+  //           height: 100%
+  //           left: 0
+  //           top: 0
+  //           background: #1f1f1f
+  //           z-index: 1
+  //           transform: translateX(calc(62px - 100%))
+  //           transition: .3s linear all
+  //       &:hover 
+  //           &:after
+  //               transform: translateX(calc(0%))
+  //               transition: .3s linear all
+  //     a
+  //       color: #ffd63c
+  //   .technologies-list
+  //     display: flex
+  //     flex-wrap: wrap
+  //   .technology
+  //     width: 210px
+  //     height: 180px
+  //     background: #1E1E1E
+  //     margin: 12px
+  //     display: flex
+  //     justify-content: center
+  //     align-items: center
+  //     .img-wrapper
+  //       display: flex
+  //       justify-content: center
+  //     div
+  //       display: flex
+  //       flex-direction: column
+  //       align-items: center
+  //       justify-content: space-between
+  //       height: 100px
+  //       img
+  //         display: block
+  //       p
+  //         margin-top: 10px
+      
+  //   .title
+  //     font-size: 80px
+  //     margin-left: 12px
+  //     font-weight: bold
+  //     margin-bottom: 80px
+
+  // .discovery-planning
+  //   .description-wrapper
+  //     display: flex
+  //     justify-content: center
+  //     padding: 150px 0 50px 0
+  //   .description
+  //     max-width: 925px
+  //     line-height: 1.8
+
+
+  // .discovery-planning-content
+  //   display: flex
+  //   align-items: center
+  //   justify-content: space-between
+
+  //   p
+  //     span
+  //       color: #181818
+  //       text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF
+  //   img 
+  //     max-width: 100%
+
+//   .description-planning
+//     padding-top: 150px
+//     padding-bottom: 160px
+//     display: flex
+//     justify-content: space-evenly
+//     .planning-list
+//       line-height: 4
+//       li 
+//         list-style: none
+//         color: #FFD63C
+//         font-weight: bold
+//         &::before
+//           content: ''
+//           display: inline-block
+//           width: 10px
+//           height: 10px
+//           border: 2px solid #FFD63C
+//           border-radius: 50%
+//           position: relative
+//           left: -25px
+
+
+//     .story 
+//       max-width: 570px
+//       line-height: 180%
+//   .description-content
+//     span
+//       color: #ffd63c
+//     display: flex
+//     .description-text
+//       display: flex
+//       align-items: center
+//       padding-left: 110px
+//       padding-bottom: 20px
+//     .text
+//       font-size: 60px
+//       line-height: 70px
+//       font-weight: 900
+//     .images
+//       display: flex
+//       .left
+//         margin-top: 60px
+//         margin-right: 30px
+//       .right
+//         div:first-child
+//           margin-bottom: 30px
+
+//   .container-portfolio 
+//     font-family: "Roboto", sans-serif
+//   .title-screen
+//     height: 100vh
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//   .title-wrapper
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     position: relative
+//     width: 100%
+//     img 
+//       max-width: 37%
+
+
+//   .background-title
+//     position: absolute
+//     font-weight: bold
+//     font-size: 16vw
+//     white-space: pre
+//     z-index: -1
+//     color: #181818
+//     text-shadow: -1px -1px 0 #3B3B3B, 1px -1px 0 #3B3B3B, -1px 1px 0 #3B3B3B, 1px 1px 0 #3B3B3B
+//   .front-title
+//     margin-top: 75px
+//     position: absolute
+//     font-size: 12vw
+//     font-weight: bold
+//   .content
+//     &::before
+//       content: ""
+//       background: linear-gradient(180deg, #1E1E1E 0%, rgba(30, 30, 30, 0) 100%), url('../../assets/images/background-portfolio.jpeg')
+//       opacity: 0.07
+//       filter: grayscale(1)
+//       position: absolute
+//       top: 0 
+//       left: 0
+//       width: 100% 
+//       height: 100%
 </style>

@@ -86,22 +86,22 @@
 	.blogtext-block
 		padding: 100px 15px
 
-	.content
-		.description
-			.description-content
-				flex-direction: column
-				.description-text
-					padding-left: 0
-					justify-content: center
-				.text
-					font-size: 32px
-					text-align: center
-				.images
-					justify-content: center
-					.left
-						margin: 0
-					.right
-						display: flex
+	.description
+		.description-content
+			flex-direction: column
+			.description-text
+				padding-left: 0
+			.text
+				font-size: 60px
+		.images
+			padding-right: 50px
+			justify-content: flex-end
+				// .images
+				// 	justify-content: center
+				// 	.left
+				// 		margin: 0
+				// 	.right
+				// 		display: flex
 	
 	.technologies
 		.technologies-list
@@ -122,15 +122,19 @@
 	
 	.title-screen
 		.title-wrapper
+			.front-title
+				margin-top: 0
 			img
-				max-width: 100%
-		.front-title
-			margin-top: 0
-
+				max-width: 51%
+	// 	.front-title
+	// 		margin-top: 0
 	.description
 		margin-top: 30px
 	.discovery-planning-content
 		flex-direction: column
+		.text
+			width: 100%
+			margin-bottom: 40px
 
 
 @media only screen and (max-width : 992px)
@@ -253,7 +257,7 @@
 			flex-direction: column
 			div
 				.story
-					text-align: center
+					// text-align: center
 					max-width: 100%
 			.planning-list
 				ul
@@ -271,8 +275,18 @@
 			.container
 				.title
 					font-size: 42px
-					text-align: center
+					// text-align: center
 					margin-left: 0
+					margin-bottom: 40px
+		
+		.feedback-video-wrapper
+			margin-bottom: 35px
+
+		.total 
+			.highlight
+				margin-bottom: 25px
+
+
 
 
 
@@ -439,19 +453,17 @@
 		.description
 			.description-content
 				.text 
-					font-size: 32px
+					font-size: 42px
 					line-height: 1.5
 				.images
-					margin-bottom: 20px
-					flex-direction: column
-					align-items: center
+					padding-right: 0
 					.left
-						justify-content: center
+						img
+							width: 140px
 					.right
-						flex-direction: column
-						justify-content: center
-						div:first-child
-							margin-bottom: 0
+						img 
+							width: 140px
+					
 			
 			.description-planning
 				padding-top: 0
@@ -462,8 +474,9 @@
 				ul
 					flex-direction: column
 					li 
-						line-height: 2
-						text-align: center
+						line-height: 1.5
+						// text-align: center
+	
 
 @media screen and ( max-width: 930px ) 
 	.total
@@ -475,7 +488,7 @@
 
 @media screen and ( max-width: 660px ) 
 	.total
-		.hightlight
+		.highlight
 			font-size: 42px
 		.items-wrapper
 			.items
@@ -601,29 +614,70 @@
 	.front-title
 		margin-top: 0
 		font-size: 62px
-	.discovery-planning
-		.discovery-planning-content
-			.text
-				p
-					font-size: 46px
+	.container-portfolio
+		.discovery-planning
+			padding-top: 50px
+			.discovery-planning-content
+				.text
+					p
+						font-size: 46px
 	
 	.feedback
-		padding-top: 80px
+		padding-top: 50px
 		p
 			font-size: 42px
-	.container-portfolio
-		.screenshots
-			margin: 80px
+			
+	.portfolio
+		.highlight
+			font-size: 42px
+			margin-bottom: 50px
+		.container-portfolio
+			.discovery-planning
+				padding-bottom: 50px
+			.description
+				.description-planning
+					padding-bottom: 50px
+					ul
+						padding-left: 22px
+						li::before
+							display: block
+							top: 20px
+			.screenshots
+				margin-top: 80px
+				margin-bottom: 50px
+		.more-cases
+			padding-top: 0
+			padding-bottom: 50px
+			.highlight
+				margin-bottom: 50px
+			.container
+				li
+					margin-bottom: 30px
+					a 
+						font-size: 22px
+		.container-portfolio
+			.total
+				margin-top: 50px
+			.technologies
+				padding-top: 50px
+				.technology 
+					width: 120px 
+					height: 130px
+					img
+						width: 40px
+					p 
+						font-size: 14px
+				.project-screen
+					margin-top: 56px
+		.contacts-block
+			.logo-link
+				img 
+					width: 120px
+		.contacts-title
+			font-weight: bold
+		#contacts
+			padding-top: 0
 
-	.more-cases
-		.container
-			.hightlight
-				font-size: 42px
-				margin-bottom: 20px
-			li
-				margin-bottom: 30px
-				a 
-					font-size: 22px
 
 @media only screen and (max-width : 480px)
 	.first-content
@@ -867,23 +921,35 @@
 		
 		.discovery-planning
 			.container
-				.description-wrapper
+				.discovery-wrapper
 					padding-top: 50px
-	
-	.content
-		.container-portfolio
-			.technologies
-				padding-top: 50px
 
 	.content	
 		.feedback
 			padding-top: 80px
 			p
-				text-align: center
+				// text-align: center
 				font-size: 42px
-	.statistics
-		.hightlight
-			text-align: center
+	// .statistics
+	// 	.highlight
+			// text-align: center
+
+
+	// .description
+	// 	.description-planning
+	// 		flex-direction: column
+	// 		div
+	// 			.story
+	// 				// text-align: center
+	// 				max-width: 100%
+	// 		.planning-list
+	// 			ul
+	// 				display: flex
+	// 				justify-content: space-around
+	// 				li::before
+	// 					display: none 
+	
+
 
 
 @media only screen and (max-height: 750px)

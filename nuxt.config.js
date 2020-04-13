@@ -45,6 +45,9 @@ module.exports = {
   */
   build: {
     vendor: ['scrollmagic'],
+    styleResources: {
+      sass: './assets/style/main.sass'
+    },
     /*
     ** Run ESLint on save
     */

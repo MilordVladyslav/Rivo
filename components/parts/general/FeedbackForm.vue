@@ -84,14 +84,13 @@
               </div> 
           </div>  
           <input type="hidden" class="pacet" name="type form" value="Standard form">
-          <button class="common_btn" type="submit">Send mail</button>
+          <button class="common_btn" type="submit"><span>Send mail </span></button>
       </form>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-const querystring = require("querystring");
 export default {
   data() {
     return {

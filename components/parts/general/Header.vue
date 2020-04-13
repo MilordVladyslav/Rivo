@@ -50,6 +50,7 @@
                 </a>
             </div>
         </div>
+        <!-- <client-only placeholder="Loading..."> -->
         <modal
              name="estimate"
              :adaptive="true"
@@ -64,7 +65,9 @@
                 </div>
                 <FormSend />
             </div>
-        </modal>            
+        </modal>    
+        <!-- </client-only> -->
+        <!-- <client-only placeholder="Loading...">         -->
         <modal
              name="menu"
              :adaptive="true"
@@ -97,6 +100,7 @@
                 </div>
             </div>
         </modal>
+        <!-- </client-only> -->
     </header>
 </template>
 
